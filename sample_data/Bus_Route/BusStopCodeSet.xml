@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xml:base="http://datamall.mytransport.sg/LTAoDataService.svc/" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">BusStopCodeSet</title>
+  <id>http://datamall.mytransport.sg/ltaodataservice.svc/BusStopCodeSet</id>
+  <updated>2012-02-10T08:46:08Z</updated>
+  <link rel="self" title="BusStopCodeSet" href="BusStopCodeSet" />
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440263)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440263)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440263</d:BusStopCodeID>
+        <d:Code>01012</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Hotel Grand Pacific</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01012 Road: Victoria St Description: Hotel Grand Pacific </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.337</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440264)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440264)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440264</d:BusStopCodeID>
+        <d:Code>01013</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>St. Joseph's Ch</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01013 Road: Victoria St Description: St. Joseph's Ch </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.353</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440265)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440265)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440265</d:BusStopCodeID>
+        <d:Code>01019</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Bras Basah Cplx</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01019 Road: Victoria St Description: Bras Basah Cplx </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.37</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440266)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440266)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440266</d:BusStopCodeID>
+        <d:Code>01029</d:Code>
+        <d:Road>Nth Bridge Rd</d:Road>
+        <d:Description>Cosmic Insurance Bldg</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01029 Road: Nth Bridge Rd Description: Cosmic Insurance Bldg </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.373</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440267)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440267)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440267</d:BusStopCodeID>
+        <d:Code>01039</d:Code>
+        <d:Road>Nth Bridge Rd</d:Road>
+        <d:Description>Nth Bridge Commercial Cplx</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01039 Road: Nth Bridge Rd Description: Nth Bridge Commercial Cplx </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.377</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440268)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440268)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440268</d:BusStopCodeID>
+        <d:Code>01059</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Bugis Stn</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01059 Road: Victoria St Description: Bugis Stn </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.38</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440269)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440269)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440269</d:BusStopCodeID>
+        <d:Code>01109</d:Code>
+        <d:Road>Queen St</d:Road>
+        <d:Description>Queen St Ter</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01109 Road: Queen St Description: Queen St Ter </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.383</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440270)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440270)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440270</d:BusStopCodeID>
+        <d:Code>01112</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Opp Bugis Junction</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01112 Road: Victoria St Description: Opp Bugis Junction </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.4</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440271)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440271)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440271</d:BusStopCodeID>
+        <d:Code>01113</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Bugis Stn</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01113 Road: Victoria St Description: Bugis Stn </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.49</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440272)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440272)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440272</d:BusStopCodeID>
+        <d:Code>01119</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Bugis Junction</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01119 Road: Victoria St Description: Bugis Junction </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.49</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440273)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440273)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440273</d:BusStopCodeID>
+        <d:Code>01121</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Stamford Pr Sch</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01121 Road: Victoria St Description: Stamford Pr Sch </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.497</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440274)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440274)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440274</d:BusStopCodeID>
+        <d:Code>01129</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Opp Stamford Pr Sch</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01129 Road: Victoria St Description: Opp Stamford Pr Sch </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.5</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440275)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440275)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440275</d:BusStopCodeID>
+        <d:Code>01139</d:Code>
+        <d:Road>Nth Bridge Rd</d:Road>
+        <d:Description>Parkview Sq</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01139 Road: Nth Bridge Rd Description: Parkview Sq </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.503</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440276)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440276)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440276</d:BusStopCodeID>
+        <d:Code>01211</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Opp Blk 461</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01211 Road: Victoria St Description: Opp Blk 461 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.507</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440277)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440277)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440277</d:BusStopCodeID>
+        <d:Code>01219</d:Code>
+        <d:Road>Victoria St</d:Road>
+        <d:Description>Blk 461</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01219 Road: Victoria St Description: Blk 461 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.51</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440278)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440278)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440278</d:BusStopCodeID>
+        <d:Code>01229</d:Code>
+        <d:Road>Nth Bridge Rd</d:Road>
+        <d:Description>Bef Sultan Mque</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01229 Road: Nth Bridge Rd Description: Bef Sultan Mque </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.513</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440279)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440279)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440279</d:BusStopCodeID>
+        <d:Code>01231</d:Code>
+        <d:Road>Jln Sultan</d:Road>
+        <d:Description>Opp Textile Ctr</d:Description>
+        <d:Layout_Num>4</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01231 Road: Jln Sultan Description: Opp Textile Ctr </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.517</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440280)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440280)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440280</d:BusStopCodeID>
+        <d:Code>01239</d:Code>
+        <d:Road>Jln Sultan</d:Road>
+        <d:Description>Sultan Plaza</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01239 Road: Jln Sultan Description: Sultan Plaza </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.52</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440281)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440281)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440281</d:BusStopCodeID>
+        <d:Code>01311</d:Code>
+        <d:Road>Kallang Rd</d:Road>
+        <d:Description>Lavender Stn</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01311 Road: Kallang Rd Description: Lavender Stn </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.523</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440282)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440282)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440282</d:BusStopCodeID>
+        <d:Code>01319</d:Code>
+        <d:Road>Kallang Rd</d:Road>
+        <d:Description>Lavender Stn</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01319 Road: Kallang Rd Description: Lavender Stn </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.527</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440283)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440283)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440283</d:BusStopCodeID>
+        <d:Code>01329</d:Code>
+        <d:Road>Nth Bridge Rd</d:Road>
+        <d:Description>Blk 8</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01329 Road: Nth Bridge Rd Description: Blk 8 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.53</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440284)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440284)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440284</d:BusStopCodeID>
+        <d:Code>01339</d:Code>
+        <d:Road>Crawford St</d:Road>
+        <d:Description>Bef Crawford Bridge</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01339 Road: Crawford St Description: Bef Crawford Bridge </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.533</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440285)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440285)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440285</d:BusStopCodeID>
+        <d:Code>01341</d:Code>
+        <d:Road>Crawford St</d:Road>
+        <d:Description>Eng Cheong Twr</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01341 Road: Crawford St Description: Eng Cheong Twr </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.537</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440286)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440286)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440286</d:BusStopCodeID>
+        <d:Code>01349</d:Code>
+        <d:Road>Crawford St</d:Road>
+        <d:Description>Opp Blk 4</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01349 Road: Crawford St Description: Opp Blk 4 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.54</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440287)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440287)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440287</d:BusStopCodeID>
+        <d:Code>01411</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Keypoint Bldg</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01411 Road: Beach Rd Description: Keypoint Bldg </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.547</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440288)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440288)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440288</d:BusStopCodeID>
+        <d:Code>01419</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>St. John HQ</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01419 Road: Beach Rd Description: St. John HQ </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.55</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440289)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440289)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440289</d:BusStopCodeID>
+        <d:Code>01421</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Opp Golden Mile Cplx</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01421 Road: Beach Rd Description: Opp Golden Mile Cplx </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.553</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440290)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440290)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440290</d:BusStopCodeID>
+        <d:Code>01429</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Golden Mile Cplx</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01429 Road: Beach Rd Description: Golden Mile Cplx </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.557</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440291)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440291)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440291</d:BusStopCodeID>
+        <d:Code>01511</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Opp The Gateway</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01511 Road: Beach Rd Description: Opp The Gateway </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.56</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440292)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440292)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440292</d:BusStopCodeID>
+        <d:Code>01519</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>The Gateway</d:Description>
+        <d:Layout_Num>2</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01519 Road: Beach Rd Description: The Gateway </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.563</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440293)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440293)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440293</d:BusStopCodeID>
+        <d:Code>01521</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Opp Plaza Parkroyal</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01521 Road: Beach Rd Description: Opp Plaza Parkroyal </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.567</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440294)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440294)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440294</d:BusStopCodeID>
+        <d:Code>01529</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Plaza Parkroyal</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01529 Road: Beach Rd Description: Plaza Parkroyal </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.57</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440295)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440295)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440295</d:BusStopCodeID>
+        <d:Code>01541</d:Code>
+        <d:Road>Rochor Rd</d:Road>
+        <d:Description xml:space="preserve"> Aft Beach Rd</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01541 Road: Rochor Rd Description:  Aft Beach Rd </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.573</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440296)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440296)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440296</d:BusStopCodeID>
+        <d:Code>01549</d:Code>
+        <d:Road>Ophir Rd</d:Road>
+        <d:Description xml:space="preserve"> Near Bali Lane</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01549 Road: Ophir Rd Description:  Near Bali Lane </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.577</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440297)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440297)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440297</d:BusStopCodeID>
+        <d:Code>01559</d:Code>
+        <d:Road>Ophir Rd</d:Road>
+        <d:Description xml:space="preserve">Golden Landmark </d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01559 Road: Ophir Rd Description: Golden Landmark  </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.58</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440298)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440298)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440298</d:BusStopCodeID>
+        <d:Code>01611</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Raffles Hotel</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01611 Road: Beach Rd Description: Raffles Hotel </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.583</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440299)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440299)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440299</d:BusStopCodeID>
+        <d:Code>01619</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Opp Raffles Hotel</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01619 Road: Beach Rd Description: Opp Raffles Hotel </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.587</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440300)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440300)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440300</d:BusStopCodeID>
+        <d:Code>01621</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Opp Shaw Twrs</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01621 Road: Beach Rd Description: Opp Shaw Twrs </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.59</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440301)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440301)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440301</d:BusStopCodeID>
+        <d:Code>01629</d:Code>
+        <d:Road>Beach Rd</d:Road>
+        <d:Description>Shaw Twrs</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01629 Road: Beach Rd Description: Shaw Twrs </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.593</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440302)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440302)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440302</d:BusStopCodeID>
+        <d:Code>01631</d:Code>
+        <d:Road>Middle Rd</d:Road>
+        <d:Description>Aft Beach Rd</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01631 Road: Middle Rd Description: Aft Beach Rd </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.597</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440303)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440303)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440303</d:BusStopCodeID>
+        <d:Code>01639</d:Code>
+        <d:Road>Middle Rd</d:Road>
+        <d:Description>Bef Beach Rd</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 01639 Road: Middle Rd Description: Bef Beach Rd </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.6</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440304)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440304)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440304</d:BusStopCodeID>
+        <d:Code>02011</d:Code>
+        <d:Road>Fullerton Rd</d:Road>
+        <d:Description>Victoria Concert Hall</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02011 Road: Fullerton Rd Description: Victoria Concert Hall </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.603</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440305)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440305)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440305</d:BusStopCodeID>
+        <d:Code>02029</d:Code>
+        <d:Road>Connaught Dr</d:Road>
+        <d:Description>Opp S'pore Cricket Club</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02029 Road: Connaught Dr Description: Opp S'pore Cricket Club </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.61</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440306)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440306)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440306</d:BusStopCodeID>
+        <d:Code>02031</d:Code>
+        <d:Road>Coleman St</d:Road>
+        <d:Description>Opp The Adelphi</d:Description>
+        <d:Layout_Num>2</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02031 Road: Coleman St Description: Opp The Adelphi </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.61</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440307)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440307)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440307</d:BusStopCodeID>
+        <d:Code>02049</d:Code>
+        <d:Road>Bras Basah Rd</d:Road>
+        <d:Description>Raffles Hotel</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02049 Road: Bras Basah Rd Description: Raffles Hotel </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.613</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440308)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440308)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440308</d:BusStopCodeID>
+        <d:Code>02051</d:Code>
+        <d:Road>Raffles Ave</d:Road>
+        <d:Description>Seating Gallery</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02051 Road: Raffles Ave Description: Seating Gallery </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.617</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440309)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440309)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440309</d:BusStopCodeID>
+        <d:Code>02061</d:Code>
+        <d:Road>Raffles Ave</d:Road>
+        <d:Description>The Esplanade</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02061 Road: Raffles Ave Description: The Esplanade </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.62</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440310)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440310)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440310</d:BusStopCodeID>
+        <d:Code>02089</d:Code>
+        <d:Road>Raffles Blvd</d:Road>
+        <d:Description>Pan Pacific Hotel</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02089 Road: Raffles Blvd Description: Pan Pacific Hotel </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.623</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440311)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440311)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440311</d:BusStopCodeID>
+        <d:Code>02099</d:Code>
+        <d:Road>Raffles Blvd</d:Road>
+        <d:Description>Marina Ctr Ter</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02099 Road: Raffles Blvd Description: Marina Ctr Ter </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.63</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/BusStopCodeSet(1440312)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:08Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="BusStopCode" href="BusStopCodeSet(1440312)" />
+    <category term="LTAModel.BusStopCode" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BusStopCodeID m:type="Edm.Int32">1440312</d:BusStopCodeID>
+        <d:Code>02101</d:Code>
+        <d:Road>Raffles Ave</d:Road>
+        <d:Description>Bef Temasek Ave</d:Description>
+        <d:Layout_Num>1</d:Layout_Num>
+        <d:Max_Pages>-</d:Max_Pages>
+        <d:Summary xml:space="preserve">Code: 02101 Road: Raffles Ave Description: Bef Temasek Ave </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T22:14:54.63</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+</feed>

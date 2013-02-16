@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xml:base="http://datamall.mytransport.sg/LTAoDataService.svc/" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">SBSTRouteSet</title>
+  <id>http://datamall.mytransport.sg/ltaodataservice.svc/SBSTRouteSet</id>
+  <updated>2012-02-10T08:46:55Z</updated>
+  <link rel="self" title="SBSTRouteSet" href="SBSTRouteSet" />
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438131)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438131)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438131</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>1</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>75009</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>0.0</d:SR_DISTANCE>
+        <d:SR_FST_WD>0500</d:SR_FST_WD>
+        <d:SR_LST_WD>2300</d:SR_LST_WD>
+        <d:SR_FST_SAT>0500</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2300</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0500</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2300</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 75009 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.457</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438132)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438132)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438132</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>2</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>76059</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>0.6</d:SR_DISTANCE>
+        <d:SR_FST_WD>0502</d:SR_FST_WD>
+        <d:SR_LST_WD>2302</d:SR_LST_WD>
+        <d:SR_FST_SAT>0502</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2302</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0502</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2302</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 76059 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.46</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438133)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438133)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438133</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>3</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>76069</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>1.1</d:SR_DISTANCE>
+        <d:SR_FST_WD>0504</d:SR_FST_WD>
+        <d:SR_LST_WD>2304</d:SR_LST_WD>
+        <d:SR_FST_SAT>0504</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2304</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0504</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2304</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 76069 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.463</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438134)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438134)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438134</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>4</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>96289</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>2.3</d:SR_DISTANCE>
+        <d:SR_FST_WD>0509</d:SR_FST_WD>
+        <d:SR_LST_WD>2309</d:SR_LST_WD>
+        <d:SR_FST_SAT>0508</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2309</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0508</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2310</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 96289 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.467</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438135)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438135)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438135</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>5</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>96109</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>2.7</d:SR_DISTANCE>
+        <d:SR_FST_WD>0510</d:SR_FST_WD>
+        <d:SR_LST_WD>2310</d:SR_LST_WD>
+        <d:SR_FST_SAT>0510</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2310</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0510</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2311</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 96109 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.47</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438136)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438136)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438136</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>6</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>85079</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>3.3</d:SR_DISTANCE>
+        <d:SR_FST_WD>0512</d:SR_FST_WD>
+        <d:SR_LST_WD>2312</d:SR_LST_WD>
+        <d:SR_FST_SAT>0512</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2312</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0512</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2314</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 85079 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.473</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438137)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438137)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438137</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>7</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>85089</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>3.5</d:SR_DISTANCE>
+        <d:SR_FST_WD>0513</d:SR_FST_WD>
+        <d:SR_LST_WD>2313</d:SR_LST_WD>
+        <d:SR_FST_SAT>0512</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2313</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0512</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2314</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 85089 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.48</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438138)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438138)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438138</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>8</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>85069</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>3.8</d:SR_DISTANCE>
+        <d:SR_FST_WD>0514</d:SR_FST_WD>
+        <d:SR_LST_WD>2314</d:SR_LST_WD>
+        <d:SR_FST_SAT>0514</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2314</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0514</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2316</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 85069 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.48</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438139)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438139)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438139</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>9</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>85059</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>4.1</d:SR_DISTANCE>
+        <d:SR_FST_WD>0516</d:SR_FST_WD>
+        <d:SR_LST_WD>2316</d:SR_LST_WD>
+        <d:SR_FST_SAT>0515</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2316</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0515</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2317</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 85059 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.487</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438140)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438140)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438140</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>10</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>85049</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>4.5</d:SR_DISTANCE>
+        <d:SR_FST_WD>0517</d:SR_FST_WD>
+        <d:SR_LST_WD>2317</d:SR_LST_WD>
+        <d:SR_FST_SAT>0516</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2317</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0516</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2319</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 85049 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.49</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438141)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438141)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438141</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>11</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>85039</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>4.8</d:SR_DISTANCE>
+        <d:SR_FST_WD>0518</d:SR_FST_WD>
+        <d:SR_LST_WD>2318</d:SR_LST_WD>
+        <d:SR_FST_SAT>0517</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2318</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0517</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2320</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 85039 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.493</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438142)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438142)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438142</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>12</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>85029</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>5.0</d:SR_DISTANCE>
+        <d:SR_FST_WD>0519</d:SR_FST_WD>
+        <d:SR_LST_WD>2319</d:SR_LST_WD>
+        <d:SR_FST_SAT>0518</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2319</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0518</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2321</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 85029 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.497</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438143)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438143)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438143</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>13</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>85019</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>5.2</d:SR_DISTANCE>
+        <d:SR_FST_WD>0520</d:SR_FST_WD>
+        <d:SR_LST_WD>2320</d:SR_LST_WD>
+        <d:SR_FST_SAT>0519</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2320</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0519</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2322</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 85019 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.5</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438144)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438144)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438144</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>14</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>94079</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>5.4</d:SR_DISTANCE>
+        <d:SR_FST_WD>0521</d:SR_FST_WD>
+        <d:SR_LST_WD>2321</d:SR_LST_WD>
+        <d:SR_FST_SAT>0520</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2321</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0520</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2323</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 94079 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.503</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438145)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438145)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438145</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>15</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>94069</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>5.9</d:SR_DISTANCE>
+        <d:SR_FST_WD>0522</d:SR_FST_WD>
+        <d:SR_LST_WD>2322</d:SR_LST_WD>
+        <d:SR_FST_SAT>0521</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2322</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0521</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2324</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 94069 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.51</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438146)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438146)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438146</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>16</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>94059</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>6.3</d:SR_DISTANCE>
+        <d:SR_FST_WD>0523</d:SR_FST_WD>
+        <d:SR_LST_WD>2323</d:SR_LST_WD>
+        <d:SR_FST_SAT>0521</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2323</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0521</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2325</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 94059 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.51</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438147)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438147)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438147</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>17</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>94049</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>6.7</d:SR_DISTANCE>
+        <d:SR_FST_WD>0524</d:SR_FST_WD>
+        <d:SR_LST_WD>2324</d:SR_LST_WD>
+        <d:SR_FST_SAT>0522</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2324</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0522</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2326</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 94049 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.517</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438148)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438148)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438148</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>18</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>94089</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>6.9</d:SR_DISTANCE>
+        <d:SR_FST_WD>0524</d:SR_FST_WD>
+        <d:SR_LST_WD>2325</d:SR_LST_WD>
+        <d:SR_FST_SAT>0523</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2324</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0523</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2326</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 94089 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.52</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438149)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438149)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438149</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>19</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>94039</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>7.2</d:SR_DISTANCE>
+        <d:SR_FST_WD>0525</d:SR_FST_WD>
+        <d:SR_LST_WD>2325</d:SR_LST_WD>
+        <d:SR_FST_SAT>0523</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2325</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0523</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2327</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 94039 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.523</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438150)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438150)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438150</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>20</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>94029</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>7.6</d:SR_DISTANCE>
+        <d:SR_FST_WD>0526</d:SR_FST_WD>
+        <d:SR_LST_WD>2326</d:SR_LST_WD>
+        <d:SR_FST_SAT>0524</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2326</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0524</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2328</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 94029 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.527</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438151)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438151)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438151</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>21</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>94019</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>7.8</d:SR_DISTANCE>
+        <d:SR_FST_WD>0526</d:SR_FST_WD>
+        <d:SR_LST_WD>2327</d:SR_LST_WD>
+        <d:SR_FST_SAT>0525</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2326</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0525</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2328</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 94019 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.53</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438152)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438152)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438152</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>22</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>93099</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>8.2</d:SR_DISTANCE>
+        <d:SR_FST_WD>0527</d:SR_FST_WD>
+        <d:SR_LST_WD>2328</d:SR_LST_WD>
+        <d:SR_FST_SAT>0526</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2327</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0526</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2329</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 93099 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.533</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438153)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438153)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438153</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>23</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>93089</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>8.7</d:SR_DISTANCE>
+        <d:SR_FST_WD>0528</d:SR_FST_WD>
+        <d:SR_LST_WD>2329</d:SR_LST_WD>
+        <d:SR_FST_SAT>0527</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2328</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0527</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2330</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 93089 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.537</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438154)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438154)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438154</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>24</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>93079</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>9.0</d:SR_DISTANCE>
+        <d:SR_FST_WD>0529</d:SR_FST_WD>
+        <d:SR_LST_WD>2330</d:SR_LST_WD>
+        <d:SR_FST_SAT>0527</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2329</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0527</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2331</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 93079 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.54</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438155)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438155)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438155</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>25</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>93069</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>9.3</d:SR_DISTANCE>
+        <d:SR_FST_WD>0530</d:SR_FST_WD>
+        <d:SR_LST_WD>2331</d:SR_LST_WD>
+        <d:SR_FST_SAT>0528</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2330</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0528</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2332</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 93069 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.543</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438156)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438156)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438156</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>26</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>93059</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>9.7</d:SR_DISTANCE>
+        <d:SR_FST_WD>0531</d:SR_FST_WD>
+        <d:SR_LST_WD>2332</d:SR_LST_WD>
+        <d:SR_FST_SAT>0529</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2331</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0529</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2333</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 93059 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.547</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438157)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438157)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438157</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>27</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>92159</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>10.0</d:SR_DISTANCE>
+        <d:SR_FST_WD>0532</d:SR_FST_WD>
+        <d:SR_LST_WD>2333</d:SR_LST_WD>
+        <d:SR_FST_SAT>0530</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2332</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0530</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2334</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 92159 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.55</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438158)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438158)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438158</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>28</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>92149</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>10.3</d:SR_DISTANCE>
+        <d:SR_FST_WD>0533</d:SR_FST_WD>
+        <d:SR_LST_WD>2334</d:SR_LST_WD>
+        <d:SR_FST_SAT>0531</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2334</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0531</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2335</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 92149 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.553</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438159)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438159)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438159</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>29</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>92139</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>10.6</d:SR_DISTANCE>
+        <d:SR_FST_WD>0534</d:SR_FST_WD>
+        <d:SR_LST_WD>2335</d:SR_LST_WD>
+        <d:SR_FST_SAT>0532</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2335</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0532</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2336</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 92139 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.56</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438160)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438160)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438160</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>30</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>92129</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>11.1</d:SR_DISTANCE>
+        <d:SR_FST_WD>0535</d:SR_FST_WD>
+        <d:SR_LST_WD>2336</d:SR_LST_WD>
+        <d:SR_FST_SAT>0533</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2336</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0533</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2338</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 92129 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.56</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438161)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438161)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438161</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>31</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>92119</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>11.6</d:SR_DISTANCE>
+        <d:SR_FST_WD>0537</d:SR_FST_WD>
+        <d:SR_LST_WD>2337</d:SR_LST_WD>
+        <d:SR_FST_SAT>0534</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2338</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0534</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2339</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 92119 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.567</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438162)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438162)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438162</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>32</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>92109</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>11.8</d:SR_DISTANCE>
+        <d:SR_FST_WD>0537</d:SR_FST_WD>
+        <d:SR_LST_WD>2338</d:SR_LST_WD>
+        <d:SR_FST_SAT>0535</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2339</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0535</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2340</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 92109 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.57</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438163)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438163)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438163</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>33</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>92099</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>12.1</d:SR_DISTANCE>
+        <d:SR_FST_WD>0538</d:SR_FST_WD>
+        <d:SR_LST_WD>2339</d:SR_LST_WD>
+        <d:SR_FST_SAT>0536</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2340</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0535</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2341</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 92099 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.573</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438164)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438164)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438164</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>34</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>92161</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>12.6</d:SR_DISTANCE>
+        <d:SR_FST_WD>0540</d:SR_FST_WD>
+        <d:SR_LST_WD>2340</d:SR_LST_WD>
+        <d:SR_FST_SAT>0537</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2341</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0537</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2342</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 92161 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.577</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438165)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438165)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438165</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>35</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>82071</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>13.0</d:SR_DISTANCE>
+        <d:SR_FST_WD>0541</d:SR_FST_WD>
+        <d:SR_LST_WD>2341</d:SR_LST_WD>
+        <d:SR_FST_SAT>0538</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2343</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0538</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2343</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 82071 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.58</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438166)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438166)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438166</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>36</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>81199</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>13.8</d:SR_DISTANCE>
+        <d:SR_FST_WD>0543</d:SR_FST_WD>
+        <d:SR_LST_WD>2343</d:SR_LST_WD>
+        <d:SR_FST_SAT>0540</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2345</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0540</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2346</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 81199 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.583</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438167)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438167)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438167</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>37</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>81189</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>14.1</d:SR_DISTANCE>
+        <d:SR_FST_WD>0544</d:SR_FST_WD>
+        <d:SR_LST_WD>2344</d:SR_LST_WD>
+        <d:SR_FST_SAT>0541</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2346</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0540</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2347</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 81189 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.587</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438168)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438168)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438168</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>38</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>81179</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>14.6</d:SR_DISTANCE>
+        <d:SR_FST_WD>0545</d:SR_FST_WD>
+        <d:SR_LST_WD>2345</d:SR_LST_WD>
+        <d:SR_FST_SAT>0542</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2348</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0541</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2348</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 81179 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.59</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438169)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438169)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438169</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>39</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>80141</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>15.3</d:SR_DISTANCE>
+        <d:SR_FST_WD>0547</d:SR_FST_WD>
+        <d:SR_LST_WD>2347</d:SR_LST_WD>
+        <d:SR_FST_SAT>0544</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2350</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0543</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2350</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 80141 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.593</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438170)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438170)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438170</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>40</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>80219</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>16.0</d:SR_DISTANCE>
+        <d:SR_FST_WD>0548</d:SR_FST_WD>
+        <d:SR_LST_WD>2348</d:SR_LST_WD>
+        <d:SR_FST_SAT>0545</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2351</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0544</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2351</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 80219 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.597</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438171)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438171)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438171</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>41</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>80169</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>17.4</d:SR_DISTANCE>
+        <d:SR_FST_WD>0551</d:SR_FST_WD>
+        <d:SR_LST_WD>2351</d:SR_LST_WD>
+        <d:SR_FST_SAT>0548</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2354</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0547</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2354</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 80169 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.6</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438172)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438172)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438172</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>42</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>80159</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>18.1</d:SR_DISTANCE>
+        <d:SR_FST_WD>0552</d:SR_FST_WD>
+        <d:SR_LST_WD>2352</d:SR_LST_WD>
+        <d:SR_FST_SAT>0549</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2356</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0548</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2355</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 80159 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.607</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438173)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438173)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438173</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>43</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>02119</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>18.6</d:SR_DISTANCE>
+        <d:SR_FST_WD>0553</d:SR_FST_WD>
+        <d:SR_LST_WD>2353</d:SR_LST_WD>
+        <d:SR_FST_SAT>0550</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2357</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0549</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2356</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 02119 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.61</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438174)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438174)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438174</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>44</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>03019</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>19.6</d:SR_DISTANCE>
+        <d:SR_FST_WD>0556</d:SR_FST_WD>
+        <d:SR_LST_WD>2355</d:SR_LST_WD>
+        <d:SR_FST_SAT>0552</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2359</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0551</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2358</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 03019 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.613</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438175)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438175)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438175</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>45</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>03059</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>20.0</d:SR_DISTANCE>
+        <d:SR_FST_WD>0557</d:SR_FST_WD>
+        <d:SR_LST_WD>2356</d:SR_LST_WD>
+        <d:SR_FST_SAT>0553</d:SR_FST_SAT>
+        <d:SR_LST_SAT>2400</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0552</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2358</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 03059 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.617</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438176)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438176)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438176</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>46</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>03129</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>20.4</d:SR_DISTANCE>
+        <d:SR_FST_WD>0558</d:SR_FST_WD>
+        <d:SR_LST_WD>2357</d:SR_LST_WD>
+        <d:SR_FST_SAT>0554</d:SR_FST_SAT>
+        <d:SR_LST_SAT>0001</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0553</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2359</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 03129 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.62</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438177)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438177)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438177</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>47</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>03217</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>20.8</d:SR_DISTANCE>
+        <d:SR_FST_WD>0559</d:SR_FST_WD>
+        <d:SR_LST_WD>2358</d:SR_LST_WD>
+        <d:SR_FST_SAT>0555</d:SR_FST_SAT>
+        <d:SR_LST_SAT>0002</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0554</d:SR_FST_SUN>
+        <d:SR_LST_SUN>2400</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 03217 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.623</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438178)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438178)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438178</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>48</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>05649</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>21.7</d:SR_DISTANCE>
+        <d:SR_FST_WD>0601</d:SR_FST_WD>
+        <d:SR_LST_WD>2359</d:SR_LST_WD>
+        <d:SR_FST_SAT>0556</d:SR_FST_SAT>
+        <d:SR_LST_SAT>0004</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0556</d:SR_FST_SUN>
+        <d:SR_LST_SUN>0001</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 05649 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.627</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438179)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438179)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438179</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>49</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>14061</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>22.0</d:SR_DISTANCE>
+        <d:SR_FST_WD>0602</d:SR_FST_WD>
+        <d:SR_LST_WD>2400</d:SR_LST_WD>
+        <d:SR_FST_SAT>0557</d:SR_FST_SAT>
+        <d:SR_LST_SAT>0005</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0557</d:SR_FST_SUN>
+        <d:SR_LST_SUN>0002</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 14061 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.63</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://datamall.mytransport.sg/LTAoDataService.svc/SBSTRouteSet(2438180)</id>
+    <title type="text"></title>
+    <updated>2012-02-10T08:46:55Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="SBSTRoute" href="SBSTRouteSet(2438180)" />
+    <category term="LTAModel.SBSTRoute" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:SBSTRouteID m:type="Edm.Int32">2438180</d:SBSTRouteID>
+        <d:SR_SVC_NUM>10</d:SR_SVC_NUM>
+        <d:SR_SVC_DIR>1</d:SR_SVC_DIR>
+        <d:SR_ROUT_SEQ>50</d:SR_ROUT_SEQ>
+        <d:SR_BS_CODE>14071</d:SR_BS_CODE>
+        <d:SR_EXP_CODE></d:SR_EXP_CODE>
+        <d:SR_DISTANCE>22.5</d:SR_DISTANCE>
+        <d:SR_FST_WD>0603</d:SR_FST_WD>
+        <d:SR_LST_WD>0001</d:SR_LST_WD>
+        <d:SR_FST_SAT>0558</d:SR_FST_SAT>
+        <d:SR_LST_SAT>0006</d:SR_LST_SAT>
+        <d:SR_FST_SUN>0558</d:SR_FST_SUN>
+        <d:SR_LST_SUN>0003</d:SR_LST_SUN>
+        <d:Summary xml:space="preserve">SR_SVC_NUM: 10 SR_SVC_DIR: 1 SR_BS_CODE: 14071 </d:Summary>
+        <d:CreateDate m:type="Edm.DateTime">2012-02-09T23:06:55.633</d:CreateDate>
+      </m:properties>
+    </content>
+  </entry>
+</feed>
