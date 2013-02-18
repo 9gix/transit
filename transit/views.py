@@ -2,7 +2,6 @@ from django.http import HttpResponse, Http404
 from django.views.generic import View
 from google.appengine.api import urlfetch
 from google.appengine.ext.db import GeoPt
-from google.appengine.api import urlfetch
 import urllib2
 from pykml import parser
 from transit.models import Bus, BusRoute
