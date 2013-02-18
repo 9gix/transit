@@ -2,6 +2,7 @@
 import os, sys
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'gohome.settings')
+sys.path.insert(0,'lib')
 
 if __name__ == '__main__':
     from django.core.management import execute_from_command_line
