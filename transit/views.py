@@ -17,10 +17,17 @@ class FetchBusServiceView(View):
         result = urlfetch.fetch(MAP_URL)
         soup = BeautifulSoup(result.content)
         options = soup.find(id='busservice_option').find_all('option')
-        bus_no_list = [str(option.attrs.get('value')) for option in options
+        bus_service_list = [str(option.attrs.get('value')) for option in options
                 if option.attrs.get('value') != 'default']
-        # TODO: put into datastore. and fetch the bus routes accordingly via task queue
-        return HttpResponse(bus_no_list)
+        self._store(bus_service_list)
+        return HttpResponse('Ok')
+
+    def _store(self, bus_service_list):
+        for bus_service in bus_service_list:
+            bus_no, bus_route = bus_service.split('_')
+            bus = Bus.get_or_insert(bus_no, no=bus_no)
+            route = bus_no + '-' + bus_route
+            BusRoute.get_or_insert(route, bus=bus.key())
 
 class FetchBusRouteView(View):
 
