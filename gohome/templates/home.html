@@ -5,5 +5,11 @@
 <hr />
 <h2>Working in Progress</h2>
 <p>Please Come Back Again Soon or contact me if you're interested</p>
+<select>
+  <option value=''>Select Bus Service</option>
+  {% for bus in buses %}
+  <option value='{{ bus.no }}'>{{ bus.no }}</option>
+  {% endfor %}
+</select>
 by Eugene (<a href="mailto:yeo.eugene.oey@gmail.com">yeo.eugene.oey@gmail.com</a>)
 {% endblock %}
