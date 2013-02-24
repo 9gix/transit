@@ -1,15 +1,46 @@
 {% extends 'base.html' %}
 
+{% block style %}
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map { height: 90%; width: 50% }
+    </style>
+{% endblock %}
+
+{% block script %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWT-4e0uWKB4LFa-wWXJCWKNQ2lPk_aEs&sensor=false"></script>
+<script>
+  function initialize(){
+    var opt = {
+        center: new google.maps.LatLng(1.35188,103.820114),
+        zoom: 11,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById('map'), opt);
+  }
+  (function(){
+    initialize();
+  })();
+</script>
+{% endblock %}
+
 {% block main %}
 <h1>Singapore Bus Visualizer</h1>
 <hr />
-<h2>Working in Progress</h2>
-<p>Please Come Back Again Soon or contact me if you're interested</p>
+<form action='' method='GET'>
+  <input name='from' placeholder='From'>
+  <input name='to' placeholder='To'>
+  <button>Find Bus Nearby</button>
+</form>
+<div id='map'></div>
 <select>
   <option value=''>Select Bus Service</option>
   {% for bus in buses %}
   <option value='{{ bus.no }}'>{{ bus.no }}</option>
   {% endfor %}
 </select>
+
 by Eugene (<a href="mailto:yeo.eugene.oey@gmail.com">yeo.eugene.oey@gmail.com</a>)
 {% endblock %}
