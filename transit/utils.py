@@ -23,7 +23,7 @@ def haversine(lat1, lon1, lat2, lon2):
 
 def geocoding(address):
     address = quote_plus(address)
-    url="http://maps.googleapis.com/maps/api/geocode/json?address=%s&sensor=false" % address
+    url="http://maps.googleapis.com/maps/api/geocode/json?address=%s&sensor=false&components=country:SG" % address
 
     response = urllib2.urlopen(url)
     jsongeocode = json.loads(response.read())

@@ -30,17 +30,17 @@
 <h1>Singapore Bus Visualizer</h1>
 <hr />
 <form action='' method='GET'>
-  <input name='from' placeholder='From'>
-  <input name='to' placeholder='To'>
+  <input name='from' placeholder='From' value='{{ from }}'>
+  <input name='to' placeholder='To' value='{{ to }}'>
   <button>Find Bus Nearby</button>
 </form>
 <div id='map'></div>
-<select>
-  <option value=''>Select Bus Service</option>
-  {% for bus in buses %}
-  <option value='{{ bus.no }}'>{{ bus.no }}</option>
-  {% endfor %}
-</select>
+{% if buses %}
+<h3>Bus Services travelling from {{ from }} to {{ to }}</h3>
+<ol>
+  {% for bus in buses %}<li>{{ bus }}</li>{% endfor %}
+</ol>
+{% endif %}
 
 by Eugene (<a href="mailto:yeo.eugene.oey@gmail.com">yeo.eugene.oey@gmail.com</a>)
 {% endblock %}
