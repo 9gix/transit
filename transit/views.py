@@ -69,8 +69,10 @@ class FetchBusStopView(View):
                 placemarks = rt.Document.Placemark
             except AttributeError:
                 placemarks = []
+            busStyleClasses = ['#busStopIcon', '#busStopMixIcon',
+                    '#busStopMixWArrivalIcon', '#busStopWArrivalIcon']
             for placemark in placemarks:
-                if placemark.styleUrl.text in ['#busStopIcon', '#busStopMixIcon']:
+                if placemark.styleUrl.text in busStyleClasses:
                     coordinate = placemark.Point.coordinates.text
 
                     geopt = GeoPt(*coordinate.split(',')[::-1])
