@@ -142,6 +142,15 @@ class BusStopFetcher(View):
             )
         return HttpResponse("OK")
 
+class Fetcher(View):
+    def get(self, *args, **kwargs):
+        taskqueue.add(
+            url='/transit/fetcher/bus-stop/',
+            method='GET',
+        )
+        return HttpResponse("Adding Task In Progress")
+
+
 class FetchBusRouteView(View):
     """
     @DEPRECATED
