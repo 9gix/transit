@@ -2,11 +2,13 @@ from django.http import HttpResponse, Http404
 from django.views.generic import View
 from google.appengine.api import urlfetch
 from google.appengine.ext.db import GeoPt
+from google.appengine.api import taskqueue
 import urllib2
 import re
 from pykml import parser
 from transit.models import Bus, BusRoute, BusStop, BusRouteStop
 from bs4 import BeautifulSoup
+from random import shuffle, randint
 
 BASE_URL = "http://www.publictransport.sg/"
 BUS_ROUTE_API_PATH = BASE_URL + '/kml/busroutes/'
@@ -63,7 +65,10 @@ class FetchBusStopView(View):
         else:
             ps = parser.parse(result)
             rt = ps.getroot()
-            placemarks = rt.Document.Placemark
+            try:
+                placemarks = rt.Document.Placemark
+            except AttributeError:
+                placemarks = []
             for placemark in placemarks:
                 if placemark.styleUrl.text in ['#busStopIcon', '#busStopMixIcon']:
                     coordinate = placemark.Point.coordinates.text
@@ -122,8 +127,25 @@ class FetchBusStopView(View):
                             brs.put()
             return HttpResponse("OK")
 
+class BusStopFetcher(View):
+    def get(self, *args, **kwargs):
+        zone_segments = range(1023)
+        shuffle(zone_segments)
+        for i, zone_segment in enumerate(zone_segments):
+            taskqueue.add(
+                url='/transit/fetch/bus-stop/%s/' % zone_segment,
+                method='GET',
+                queue_name='bus-stop-fetcher',
+                countdown=i * 120 + randint(1, 1500), # fires about 1 hour each
+            )
+        return HttpResponse("OK")
+
 class FetchBusRouteView(View):
-    """Fetching routes
+    """
+    @DEPRECATED
+    Since Bus Stop Coordinate Can be found this function will be ignored
+
+    Fetching routes
     BusRoute:
         routes
     """
