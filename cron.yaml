@@ -1,4 +1,4 @@
 cron:
 - description: monthy update bus stop information
-  url: /transit/fetcher/bus-stop/
+  url: /transit/fetch/
   schedule: 3 of month 21:44

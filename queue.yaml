@@ -1,6 +1,6 @@
 queue:
 - name: bus-stop-fetcher
-  rate: 10/h
+  rate: 20/h
   retry_parameters:
     min_backoff_seconds: 300
     max_backoff_seconds: 7200

@@ -138,7 +138,7 @@ class BusStopFetcher(View):
                 url='/transit/fetch/bus-stop/%s/' % zone_segment,
                 method='GET',
                 queue_name='bus-stop-fetcher',
-                countdown=i * 120 + randint(1, 1500), # fires about 1 hour each
+                countdown=i * 60 + randint(1, 1500), # fires about 1 hour each
             )
         return HttpResponse("OK")
 
