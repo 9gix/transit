@@ -16,7 +16,9 @@ BUS_STOP_API_PATH = BASE_URL + '/kml/busstops/'
 MAP_URL = BASE_URL + "/content/publictransport/en/homepage/map.html"
 
 class FetchBusServiceView(View):
-    """Fetching all bus services with its direction
+    """
+    @DEPRECATE: useless
+    Fetching all bus services with its direction
     Bus:
         Bus Service No
     BusRoute:
@@ -150,38 +152,3 @@ class Fetcher(View):
         )
         return HttpResponse("Adding Task In Progress")
 
-
-class FetchBusRouteView(View):
-    """
-    @DEPRECATED
-    Since Bus Stop Coordinate Can be found this function will be ignored
-
-    Fetching routes
-    BusRoute:
-        routes
-    """
-
-    def get(self, request, bus_no, direction, *args, **kwargs):
-        data = {'bus_no': bus_no, 'direction': direction}
-        KML_FILE = "%(bus_no)s-%(direction)s.kml" % data
-        url = BUS_ROUTE_API_PATH + KML_FILE
-        try:
-            result = urllib2.urlopen(url)
-        except urllib2.HTTPError:
-            raise Http404
-        else:
-            ps = parser.parse(result)
-            rt = ps.getroot()
-            coords = rt.Document.Placemark.LineString.coordinates.text.split()
-
-            # Store Bus Service
-            Bus.get_or_insert(bus_no, no=bus_no)
-
-            # Store Bus Routes
-            route = bus_no + "-" + direction
-            routes = [GeoPt(*coord.split(',')[::-1]) for coord in coords]
-            bus_route = BusRoute.get_or_insert(route, routes=routes)
-            bus_route.routes = routes
-            bus_route.put()
-
-            return HttpResponse("Ok")
