@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from transit.views import FetchBusServiceView, \
-        FetchBusStopView, BusStopFetcher, Fetcher
+from transit.views import FetchBusStopView, BusStopFetcher, Fetcher
 
 admin.autodiscover()
 
