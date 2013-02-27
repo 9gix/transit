@@ -6,7 +6,7 @@ from google.appengine.api import taskqueue
 import urllib2
 import re
 from pykml import parser
-from transit.models import Bus
+from transit.models import Bus, BusStop, Stop
 from bs4 import BeautifulSoup
 from random import shuffle, randint
 
@@ -39,12 +39,13 @@ class FetchBusStopView(View):
                 if description and placemark.styleUrl.text in busStyleClasses:
                     coordinate = placemark.Point.coordinates.text
 
-                    geopt = GeoPt(*coordinate.split(',')[::-1])
+                    lat, lng = [float(coord) for coord in coordinate.split(',')[::-1]]
                     stop_code = placemark.get('id')
 
                     stop = Stop.get_or_insert(stop_code,
                             code=stop_code,
-                            coordinate=geopt)
+                            lat=lat,
+                            lng=lng)
 
                     # Parsing and Matching the Description which contain data
                     soup = BeautifulSoup(description)

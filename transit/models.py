@@ -10,7 +10,8 @@ class Bus(db.Model):
 class Stop(db.Model):
     """Key: <code>"""
     code = db.StringProperty()
-    coordinate = db.GeoPtProperty()
+    lat = db.FloatProperty()
+    lng = db.FloatProperty()
 
 
 class BusStop(db.Model):
