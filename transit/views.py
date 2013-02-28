@@ -64,7 +64,8 @@ class FetchBusStopView(View):
                         data = match.groupdict()
                         bus = Bus.get_or_insert(data['no'],
                                 no=data['no'],
-                                operator=data['operator'])
+                                operator=data['operator'],
+                                direction=int(data['direction']))
 
                         bus_stop_key = "%(bus_stop_code)s-%(no)s" % data
                         bus_stop = BusStop.get_or_insert(bus_stop_key,

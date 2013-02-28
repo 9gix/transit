@@ -3,7 +3,7 @@ from transit.models import Bus, BusStop, Stop
 from transit.utils import geocoding, haversine
 from math import cos
 
-def find_bus_nearby(location, nearby_distance=2):
+def find_bus_nearby(location, nearby_distance=1):
     lat, lng = location[0], location[1]
     # Assumption
     # 1 deg Latitude = 111111.1 meter
@@ -29,24 +29,26 @@ def find_bus_nearby(location, nearby_distance=2):
         if distance <= nearby_distance:
             for bus_stop in stop.buses:
                 buses.append(bus_stop.bus.no)
-    return buses
+    return set(buses)
 
 class HomeView(TemplateView):
     template_name = 'home.html'
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
+        buses = []
         if self.request.GET:
             location1, location2 = self.request.GET['from'], self.request.GET['to']
             a = geocoding(location1)
             b = geocoding(location2)
-            buses_A = find_bus_nearby(a) if a else []
-            buses_B = find_bus_nearby(b) if b else []
-            buses = list(set(buses_A) & set(buses_B))
+            buses_A = find_bus_nearby(a) if a else set()
+            buses_B = find_bus_nearby(b) if b else set()
+
+            bus_list = list(buses_A & buses_B)
+
+            buses = Bus.all().filter('no IN', bus_list)
             context['from'] = self.request.GET['from']
             context['to'] = self.request.GET['to']
-        else:
-            buses = []
 
         context['buses'] = buses
         return context

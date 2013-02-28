@@ -5,6 +5,7 @@ class Bus(db.Model):
     """Key: <bus_no>"""
     no = db.StringProperty()
     operator = db.StringProperty()
+    direction = db.IntegerProperty()
 
 
 class Stop(db.Model):

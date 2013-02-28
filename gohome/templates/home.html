@@ -12,6 +12,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWT-4e0uWKB4LFa-wWXJCWKNQ2lPk_aEs&sensor=false"></script>
 <script>
+  
   function initialize(){
     var opt = {
         center: new google.maps.LatLng(1.35188,103.820114),
@@ -19,7 +20,34 @@
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(document.getElementById('map'), opt);
+
+//    var kmlLayersArray = [];
+
+    function addKmlLayer(serv_no_serv_dir) {
+        kmlLayer = new google.maps.KmlLayer('http://publictransport.sg/kml/busroutes/'+serv_no_serv_dir+'.kml');
+        kmlLayer.setMap(map);
+        //kmlLayersArray.push(kmlLayer);
+        console.log(kmlLayer);
+        console.log(map);
+    }
+
+    function deleteKmlLayer(serv_no_serv_dir){
+        kmlLayer = new google.maps.KmlLayer('http://publictransport.sg/kml/busroutes/'+serv_no_serv_dir+'.kml');
+        kmlLayer.setMap(null);
+    }
+
+    $(".bus_chkbox").each(function(){
+      $(this).click(function(){
+        if (this.checked){
+          addKmlLayer(this.value);
+        }else{
+          deleteKmlLayer(this.value);
+        }
+      });
+    });
+
   }
+
   (function(){
     initialize();
   })();
@@ -38,7 +66,7 @@
 {% if buses %}
 <h3>Bus Services travelling from {{ from }} to {{ to }}</h3>
 <ol>
-  {% for bus in buses %}<li>{{ bus }}</li>{% endfor %}
+  {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
 </ol>
 {% endif %}
 
