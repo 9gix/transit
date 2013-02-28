@@ -1,6 +1,0 @@
-ipython
-ipdb
-pykml
-beautifulsoup4
-geographiclib
-numpy
