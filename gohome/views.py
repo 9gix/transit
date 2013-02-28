@@ -3,7 +3,7 @@ from transit.models import Bus, BusStop, Stop
 from transit.utils import geocoding, haversine
 from math import cos
 
-def find_bus_nearby(location, nearby_distance=0.5):
+def find_bus_nearby(location, nearby_distance=2):
     lat, lng = location[0], location[1]
     # Assumption
     # 1 deg Latitude = 111111.1 meter
@@ -27,8 +27,8 @@ def find_bus_nearby(location, nearby_distance=0.5):
         stop = Stop.all().filter('code =', stop_code).get()
         distance = haversine(stop.lat, stop.lng, location[0], location[1])
         if distance <= nearby_distance:
-            for bus in stop.buses:
-                buses.append(bus.no)
+            for bus_stop in stop.buses:
+                buses.append(bus_stop.bus.no)
     return buses
 
 class HomeView(TemplateView):
