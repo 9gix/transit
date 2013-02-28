@@ -24,7 +24,7 @@ def find_bus_nearby(location, nearby_distance=0.5):
 
     buses = []
     for stop_code in stops_bound:
-        stop = Stop.all(projection=('lat','lng')).filter('code =', stop_code).get()
+        stop = Stop.all().filter('code =', stop_code).get()
         distance = haversine(stop.lat, stop.lng, location[0], location[1])
         if distance <= nearby_distance:
             for bus in stop.buses:
