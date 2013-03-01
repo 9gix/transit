@@ -74,6 +74,21 @@ class FetchBusStopView(View):
 
             return HttpResponse("OK")
 
+class FetchBusDirectionView(View):
+    def get(self, *args, **kwargs):
+        result = urlfetch.fetch(MAP_URL)
+        soup = BeautifulSoup(result.content)
+        options = soup.find(id='busservice_option').find_all('option')
+        bus_service_list = []
+        for option in options:
+            opt = str(option.attrs.get('value'))
+            if opt != 'default':
+                no, direction = opt.split('_')
+                bus = Bus(key_name=no)
+                bus.direction = int(direction)
+                bus.put()
+        return HttpResponse("Done")
+
 class BusStopFetcher(View):
     def get(self, *args, **kwargs):
         zone_segments = range(1023)
