@@ -85,6 +85,7 @@ class FetchBusDirectionView(View):
             if opt != 'default':
                 no, direction = opt.split('_')
                 bus = Bus(key_name=no)
+                bus.no = no
                 bus.direction = int(direction)
                 bus.put()
         return HttpResponse("Done")
