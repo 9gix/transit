@@ -22,3 +22,7 @@ libraries:
 - name: numpy
   version: latest
 
+builtins:
+- remote_api: on
+- admin_redirect: on
+- appstats: on
