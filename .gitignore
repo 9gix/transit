@@ -14,9 +14,9 @@
 atlassian-ide-plugin.xml
 
 # Project
-/gohome/local_settings.py
-/gohome/public/static
-/gohome/public/media
+/transit/local_settings.py
+/transit/public/static
+/transit/public/media
 
 # Project database
 *.db
