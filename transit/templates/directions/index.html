@@ -16,9 +16,9 @@
 <hr />
 {% crispy form %}
 
-{% if from and to %}
+{% if direction_from and direction_to %}
   {% if bus_exist %}
-  <h3>Bus Services travelling from {{ from }} to {{ to }}</h3>
+  <h3>Bus Services travelling from {{ direction_from }} to {{ direction_to }}</h3>
   <ol>
     {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
   </ol>
