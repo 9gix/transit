@@ -3,7 +3,7 @@ from transit.models import Bus, BusStop, Stop
 from transit.utils import geocoding, haversine
 from math import cos
 
-def find_bus_nearby(location, nearby_distance=1):
+def find_bus_nearby(location, nearby_distance=0.5):
     lat, lng = location[0], location[1]
     # Assumption
     # 1 deg Latitude = 111111.1 meter
