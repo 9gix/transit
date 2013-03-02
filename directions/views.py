@@ -1,6 +1,8 @@
 from django.views.generic import View
 from django.shortcuts import render
+from directions.forms import DirectionForm
 
 class DirectionView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'directions/index.html')
+        form = DirectionForm()
+        return render(request, 'directions/index.html', locals())

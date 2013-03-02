@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     # 3rd party Apps
     'south',
     'django_extensions',
+    'crispy_forms',
 
     # Internal Apps
     'directions',
@@ -160,6 +161,10 @@ LOGGING = {
         },
     }
 }
+
+# Crispy Form
+CRISPY_TEMPLATE_PACK = 'bootstrap'
+
 
 try:
     LOCAL_SETTINGS
