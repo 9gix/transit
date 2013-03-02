@@ -1,8 +1,35 @@
 {% extends 'directions/base.html' %}
 {% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{% block head %}
+<link href="{% static 'css/directions.css' %}" rel='stylesheet'>
+{% endblock %}
+
+{% block script %}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWT-4e0uWKB4LFa-wWXJCWKNQ2lPk_aEs&sensor=false"></script>
+<script src="{% static 'js/directions.js' %}"></script>
+{% endblock %}
 
 {% block body %}
-
+<h1>Singapore Bus Visualizer</h1>
+<hr />
 {% crispy form %}
+
+{% if from and to %}
+  {% if bus_exist %}
+  <h3>Bus Services travelling from {{ from }} to {{ to }}</h3>
+  <ol>
+    {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
+  </ol>
+  <hr />
+  {% else %}
+    <h3>Sorry No bus Found</h3>
+  {% endif %}
+{% endif %}
+
+<div id='map'></div>
+
+by Eugene (<a href="mailto:yeo.eugene.oey@gmail.com">yeo.eugene.oey@gmail.com</a>)
 
 {% endblock %}
