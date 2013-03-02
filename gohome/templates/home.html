@@ -57,18 +57,24 @@
 {% block main %}
 <h1>Singapore Bus Visualizer</h1>
 <hr />
-<form action='' method='GET'>
-  <input name='from' placeholder='From' value='{{ from }}'>
-  <input name='to' placeholder='To' value='{{ to }}'>
-  <button>Find Bus Nearby</button>
-</form>
-<div id='map'></div>
-{% if buses %}
-<h3>Bus Services travelling from {{ from }} to {{ to }}</h3>
-<ol>
-  {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
-</ol>
+{% if from and to %}
+  {% if bus_exist %}
+  <h3>Bus Services travelling from {{ from }} to {{ to }}</h3>
+  <ol>
+    {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
+  </ol>
+  <hr />
+  {% else %}
+    <h3>Sorry No bus Found</h3>
+  {% endif %}
 {% endif %}
+
+  <form action='' method='GET'>
+    <input name='from' placeholder='From' value='{{ from }}'>
+    <input name='to' placeholder='To' value='{{ to }}'>
+    <button>Find Bus Nearby</button>
+  </form>
+  <div id='map'></div>
 
 by Eugene (<a href="mailto:yeo.eugene.oey@gmail.com">yeo.eugene.oey@gmail.com</a>)
 {% endblock %}
