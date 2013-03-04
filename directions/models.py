@@ -1,4 +1,4 @@
-from django.db import models
+from django.contrib.gis.db import models
 
 class Bus(models.Model):
     no = models.CharField(max_length=5)
@@ -16,5 +16,9 @@ class Stop(models.Model):
     lat = models.FloatField()
     lon = models.FloatField()
 
+    location = models.PointField(srid=4326, null=True)
+
+    objects = models.GeoManager()
+
     def __unicode__(self):
-        return self.code
+        return str(self.code)

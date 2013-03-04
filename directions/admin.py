@@ -1,5 +1,7 @@
-from django.contrib import admin
+from django.contrib.gis import admin
 from directions.models import Bus, Stop
 
+
 admin.site.register(Bus)
-admin.site.register(Stop)
+
+admin.site.register(Stop, admin.GeoModelAdmin)
