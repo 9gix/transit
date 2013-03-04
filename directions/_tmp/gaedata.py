@@ -43,11 +43,14 @@ def get_buses_data():
 
     return buses_data
 
-def main():
-    stops_data = get_stops_data()
-    buses_data = get_buses_data()
+def stop_code_mapper(data):
+    return stops_code_map[data]
 
+def main():
     initial_data = []
+
+    stops_data = get_stops_data()
+    stop_mappers = {}
     for i, stop_data in enumerate(stops_data.itervalues()):
         stop = {
             'model': 'directions.stop',
@@ -55,6 +58,12 @@ def main():
             'fields': stop_data,
         }
         initial_data.append(stop)
+        stop_mappers[stop_data['code']] = i + 1
+
+    buses_data = get_buses_data()
+    for bus_data in buses_data.itervalues():
+        x = map(lambda stop: stop_mappers[stop], bus_data['stops'])
+        bus_data['stops'] = x
 
     for i, bus_data in enumerate(buses_data.itervalues()):
         bus = {
