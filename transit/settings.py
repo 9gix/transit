@@ -166,6 +166,7 @@ LOGGING = {
 # Crispy Form
 CRISPY_TEMPLATE_PACK = 'bootstrap'
 
+GOOGLE_API_KEY = "AIzaSyAWT-4e0uWKB4LFa-wWXJCWKNQ2lPk_aEs"
 
 try:
     LOCAL_SETTINGS

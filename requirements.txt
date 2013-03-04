@@ -3,3 +3,4 @@ psycopg2>=2.4.6
 south>=0.7.6
 django-extensions>=1.0.3
 django-crispy-forms>=1.2.3
+-e git://github.com/geopy/geopy.git@master#egg=geopy

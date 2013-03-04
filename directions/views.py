@@ -1,16 +1,53 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
+from django.conf import settings
+from geopy import geocoders
 from directions.forms import DirectionForm
+from directions.models import Bus, Stop
+from django.contrib.gis.geos import Point
+from django.contrib.gis.measure import D
+from django.db.models import Q
+from django.contrib import messages
+
+bound = "1.170649,103.556442|1.485734,104.094086"
+geocoder = geocoders.GoogleV3()
+
+distance = D(km=1)
 
 class DirectionView(TemplateView):
     template_name = 'directions/index.html'
     def get_context_data(self, **kwargs):
         context = super(DirectionView, self).get_context_data(**kwargs)
-        params = self.request.GET
+        request = self.request
+        params = request.GET
+        buses = Bus.objects.none()
         if params.get('go') == 'Find Bus':
-            direction_from = params.get('direction_from')
-            direction_to = params.get('direction_to')
 
-        context['buses'] = []
+            d_from = params.get('direction_from')
+            d_to = params.get('direction_to')
+            q = Q()
+            try:
+                geo_from = geocoder.geocode(d_from, bounds=bound)
+            except ValueError:
+                messages.add_message(request, messages.ERROR, "%s not found" %d_from)
+            else:
+                context['from'] = geo_from[0]
+                loc_from = Point(geo_from[1][1], geo_from[1][0])
+
+            try:
+                geo_to = geocoder.geocode(d_to, bounds=bound)
+            except ValueError:
+                messages.add_message(request, message.ERROR, "%s not found" %d_to)
+            else:
+                context['to'] = geo_to[0]
+                loc_to = Point(geo_to[1][1], geo_to[1][0])
+
+            from_buses = Stop.objects.filter(location__distance_lte=(loc_from, distance)).values_list('bus', flat=True).distinct()
+            to_buses = Stop.objects.filter(location__distance_lte=(loc_to, distance)).values_list('bus', flat=True).distinct()
+            buses = set(from_buses) & set(to_buses)
+            buses = Bus.objects.filter(id__in=buses)
+
+
+        context['buses'] = buses
         context['form'] = DirectionForm()
         return context
