@@ -15,8 +15,13 @@ function initialize(){
     }
 
     function deleteKmlLayer(serv_no_serv_dir){
-        kmlLayer = new google.maps.KmlLayer('http://publictransport.sg/kml/busroutes/'+serv_no_serv_dir+'.kml');
-        kmlLayer.setMap(null);
+        url = 'http://publictransport.sg/kml/busroutes/'+serv_no_serv_dir+'.kml';
+        kmlLayers = $.grep(kmlLayersArray, function(kmlLayer){
+            return kmlLayer.url === url;
+        });
+        $.each(kmlLayers, function(i, kmlLayer){
+            kmlLayer.setMap(null);
+        });
     }
 
     $(".bus_chkbox").each(function(){
