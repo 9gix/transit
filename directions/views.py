@@ -37,7 +37,7 @@ class DirectionView(TemplateView):
             try:
                 geo_to = geocoder.geocode(d_to, bounds=bound)
             except ValueError:
-                messages.add_message(request, message.ERROR, "%s not found" %d_to)
+                messages.add_message(request, messages.ERROR, "%s not found" %d_to)
             else:
                 context['to'] = geo_to[0]
                 loc_to = Point(geo_to[1][1], geo_to[1][0])
