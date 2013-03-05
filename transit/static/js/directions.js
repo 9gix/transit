@@ -34,8 +34,25 @@ function initialize(){
         });
     });
 
+    var inputs = $('input');
+    var options = {
+        componentRestrictions: {country: 'sg'}
+    };
+    $.each(inputs, function(i, input){
+        var marker = new google.maps.Marker({
+            map: map
+        });
+        var autocomplete = new google.maps.places.Autocomplete(input, options);
+        autocomplete.bindTo('bounds', map);
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            var place = autocomplete.getPlace();
+            marker.setVisible(false);
+            marker.setPosition(place.geometry.location);
+            marker.setVisible(true);     
+        });
+    });
 }
 
-(function(){
+google.maps.event.addDomListener(window, 'load', function(){
     initialize();
-})();
+});

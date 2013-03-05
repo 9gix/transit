@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, View
 from django.shortcuts import render
 from django.conf import settings
 from geopy import geocoders
@@ -13,6 +13,16 @@ bound = "1.170649,103.556442|1.485734,104.094086"
 geocoder = geocoders.GoogleV3()
 
 distance = D(km=1)
+
+class FindBusView(View):
+    def get(self, request, *args, **kwargs):
+        params = request.GET
+        d_from = params.get('from_lat_lng')
+        d_to = params.get('to_lat_lng')
+#        loc_from = Point(geo_from[1][1], geo_from[1][0])
+#        from_buses = Stop.objects.filter(location__distance_lte=(loc_from, distance)).values_list('bus', flat=True).distinct()
+        data = {}
+        return HttpReponse(data)
 
 class DirectionView(TemplateView):
     template_name = 'directions/index.html'

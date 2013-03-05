@@ -4,11 +4,16 @@
 
 {% block head %}
 <link href="{% static 'css/directions.css' %}" rel='stylesheet'>
+<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/south-street/jquery-ui.css" rel="stylesheet" />
 {% endblock %}
 
 {% block script %}
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWT-4e0uWKB4LFa-wWXJCWKNQ2lPk_aEs&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWT-4e0uWKB4LFa-wWXJCWKNQ2lPk_aEs&sensor=false&libraries=places"></script>
+<script src="{% static 'js/ui.geo_autocomplete.js' %}"></script>
 <script src="{% static 'js/directions.js' %}"></script>
+<script>
+
+</script>
 {% endblock %}
 
 {% block body %}
@@ -26,7 +31,11 @@
 
 {% if from and to %}
   {% if buses %}
-  <h3>Bus Services travelling from {{ from }} to {{ to }}</h3>
+  <h3>Bus Services travelling between:</h3>
+  <ul>
+    <li>{{ from }}</li>
+    <li>{{ to }}</li>
+  </ul>
   <ol>
     {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
   </ol>
