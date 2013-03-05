@@ -46,7 +46,7 @@ class DirectionView(TemplateView):
 
             try:
                 buses = set(from_buses) & set(to_buses)
-            except AttributeError:
+            except UnboundLocalError:
                 buses = Bus.objects.none()
             else:
                 buses = Bus.objects.filter(id__in=buses)
