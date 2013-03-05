@@ -33,6 +33,7 @@ class DirectionView(TemplateView):
             else:
                 context['from'] = geo_from[0]
                 loc_from = Point(geo_from[1][1], geo_from[1][0])
+                from_buses = Stop.objects.filter(location__distance_lte=(loc_from, distance)).values_list('bus', flat=True).distinct()
 
             try:
                 geo_to = geocoder.geocode(d_to, bounds=bound)
@@ -41,13 +42,15 @@ class DirectionView(TemplateView):
             else:
                 context['to'] = geo_to[0]
                 loc_to = Point(geo_to[1][1], geo_to[1][0])
+                to_buses = Stop.objects.filter(location__distance_lte=(loc_to, distance)).values_list('bus', flat=True).distinct()
 
-            from_buses = Stop.objects.filter(location__distance_lte=(loc_from, distance)).values_list('bus', flat=True).distinct()
-            to_buses = Stop.objects.filter(location__distance_lte=(loc_to, distance)).values_list('bus', flat=True).distinct()
-            buses = set(from_buses) & set(to_buses)
-            buses = Bus.objects.filter(id__in=buses)
-
-
-        context['buses'] = buses
+            try:
+                buses = set(from_buses) & set(to_buses)
+            except AttributeError:
+                buses = Bus.objects.none()
+            else:
+                buses = Bus.objects.filter(id__in=buses)
+            finally:
+                context['buses'] = buses
         context['form'] = DirectionForm()
         return context
