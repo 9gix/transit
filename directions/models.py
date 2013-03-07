@@ -13,9 +13,6 @@ class Bus(models.Model):
 
 class Stop(models.Model):
     code = models.CharField(max_length=10)
-    lat = models.FloatField()
-    lon = models.FloatField()
-
     location = models.PointField(srid=4326, null=True)
 
     objects = models.GeoManager()
