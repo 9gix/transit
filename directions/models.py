@@ -3,7 +3,6 @@ from django.contrib.gis.db import models
 class Bus(models.Model):
     no = models.CharField(max_length=5)
     direction = models.IntegerField() # Obsolete
-    stops = models.ManyToManyField('Stop', through="BusStop") # Obsolete
 
     class Meta:
         verbose_name_plural = 'buses'
