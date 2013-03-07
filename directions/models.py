@@ -2,13 +2,16 @@ from django.contrib.gis.db import models
 
 class Bus(models.Model):
     no = models.CharField(max_length=5)
-    direction = models.IntegerField() # Obsolete
 
     class Meta:
         verbose_name_plural = 'buses'
 
     def __unicode__(self):
         return self.no
+
+    @property
+    def total_direction(self):
+        return self.route_set.count()
 
 class Route(models.Model):
     bus = models.ForeignKey('Bus')
@@ -23,7 +26,7 @@ class Route(models.Model):
         return self.bus.no
 
 class BusStop(models.Model):
-    bus = models.ForeignKey('Bus') # Obsolete
+    bus = models.ForeignKey('Bus') # Obsolete (Bus will be linked via route)
     route = models.ForeignKey('Route', null=True)
     stop = models.ForeignKey('Stop')
 
