@@ -14,8 +14,9 @@ class Bus(models.Model):
 class Route(models.Model):
     bus = models.ForeignKey('Bus')
     stops = models.ManyToManyField('Stop', through="BusStop")
-    multiline = models.MultiLineStringField()
-    line = models.LineStringField()
+    direction = models.IntegerField(null=True)
+    multiline = models.MultiLineStringField(null=True)
+    line = models.LineStringField(null=True)
 
     objects = models.GeoManager()
 
@@ -27,6 +28,8 @@ class BusStop(models.Model):
     route = models.ForeignKey('Route', null=True)
     stop = models.ForeignKey('Stop')
 
+    sequence = models.IntegerField(null=True)
+    distance = models.FloatField(null=True)
 
     def __unicode__(self):
         return 'Bus %s:%s' % (bus.no, stop.code)
