@@ -37,7 +37,7 @@
     <li>{{ to }}</li>
   </ul>
   <ol>
-    {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
+    {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.total_direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
   </ol>
   <hr />
   {% else %}
