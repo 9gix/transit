@@ -3,7 +3,7 @@ from django.contrib.gis.db import models
 class Bus(models.Model):
     no = models.CharField(max_length=5)
 
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -24,7 +24,7 @@ class Route(models.Model):
     multiline = models.MultiLineStringField(null=True)
     line = models.LineStringField(null=True)
 
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     objects = models.GeoManager()
@@ -39,7 +39,7 @@ class BusStop(models.Model):
     sequence = models.IntegerField(null=True)
     distance = models.FloatField(null=True)
 
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
@@ -52,7 +52,7 @@ class Stop(models.Model):
     road = models.CharField(max_length=150, null=True)
     description = models.TextField(null=True)
 
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     objects = models.GeoManager()
