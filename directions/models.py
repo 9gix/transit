@@ -3,6 +3,9 @@ from django.contrib.gis.db import models
 class Bus(models.Model):
     no = models.CharField(max_length=5)
 
+    created_at = models.DateTimeField()
+    updated_at = models.DateTimeField(auto_now=True)
+
     class Meta:
         verbose_name_plural = 'buses'
 
@@ -21,6 +24,9 @@ class Route(models.Model):
     multiline = models.MultiLineStringField(null=True)
     line = models.LineStringField(null=True)
 
+    created_at = models.DateTimeField()
+    updated_at = models.DateTimeField(auto_now=True)
+
     objects = models.GeoManager()
 
     def __unicode__(self):
@@ -32,6 +38,9 @@ class BusStop(models.Model):
 
     sequence = models.IntegerField(null=True)
     distance = models.FloatField(null=True)
+
+    created_at = models.DateTimeField()
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return 'Bus %s:%s' % (route.bus.no, stop.code)
