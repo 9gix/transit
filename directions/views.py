@@ -17,7 +17,9 @@ from lxml import etree
 from datetime import datetime
 from django.utils.dateparse import parse_datetime
 import pytz
+import logging
 
+logger = logging.getLogger(__name__)
 
 bound = "1.170649,103.556442|1.485734,104.094086"
 geocoder = geocoders.GoogleV3()
