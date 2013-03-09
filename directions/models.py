@@ -30,7 +30,7 @@ class Route(models.Model):
     objects = models.GeoManager()
 
     def __unicode__(self):
-        return self.bus.no
+        return "Bus %s (Direction: %s)" %(self.bus, self.direction)
 
 class BusStop(models.Model):
     route = models.ForeignKey('Route', null=True)
@@ -43,7 +43,7 @@ class BusStop(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return 'Bus %s:%s' % (self.route.bus.no, self.stop.code)
+        return '%s at %s' % (self.route, self.stop.code)
 
 
 class Stop(models.Model):
