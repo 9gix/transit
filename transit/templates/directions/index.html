@@ -30,14 +30,18 @@
 {% endif %}
 
 {% if from and to %}
-  {% if buses %}
+  {% if routes %}
   <h3>Bus Services travelling between:</h3>
   <ul>
     <li>{{ from }}</li>
     <li>{{ to }}</li>
   </ul>
   <ol>
-    {% for bus in buses %}<li><input type='checkbox' value='{{ bus.no }}-{{ bus.total_direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>{% endfor %}
+    {% for route in routes %}
+    {% with bus=route.bus %}
+      <li><input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>
+    {% endwith %}
+    {% endfor %}
   </ol>
   <hr />
   {% else %}

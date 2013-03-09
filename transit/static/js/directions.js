@@ -9,7 +9,7 @@ function initialize(){
     var kmlLayersArray = [];
 
     function addKmlLayer(serv_no_serv_dir) {
-        kmlLayer = new google.maps.KmlLayer('http://publictransport.sg/kml/busroutes/'+serv_no_serv_dir+'.kml');
+        kmlLayer = new google.maps.KmlLayer('http://dqbug.com/static/kml/'+serv_no_serv_dir+'.kml');
         kmlLayer.setMap(map);
         kmlLayersArray.push(kmlLayer);
     }

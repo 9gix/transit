@@ -40,7 +40,7 @@ class DirectionView(TemplateView):
         context = super(DirectionView, self).get_context_data(**kwargs)
         request = self.request
         params = request.GET
-        buses = Bus.objects.none()
+        routes = Bus.objects.none()
         if params.get('go') == 'Find Bus':
 
             d_from = params.get('direction_from')
@@ -53,7 +53,10 @@ class DirectionView(TemplateView):
             else:
                 context['from'] = geo_from[0]
                 loc_from = Point(geo_from[1][1], geo_from[1][0])
-                from_buses = Stop.objects.filter(location__distance_lte=(loc_from, distance)).values_list('bus', flat=True).distinct()
+                loc_from_routes = Stop.objects.filter(
+                        location__distance_lte=(loc_from, distance),
+                        route__isnull=False
+                    ).values_list('route', flat=True).distinct()
 
             try:
                 geo_to = geocoder.geocode(d_to, bounds=bound)
@@ -62,16 +65,19 @@ class DirectionView(TemplateView):
             else:
                 context['to'] = geo_to[0]
                 loc_to = Point(geo_to[1][1], geo_to[1][0])
-                to_buses = Stop.objects.filter(location__distance_lte=(loc_to, distance)).values_list('bus', flat=True).distinct()
+                loc_to_routes = Stop.objects.filter(
+                        location__distance_lte=(loc_to, distance),
+                        route__isnull=False
+                    ).values_list('route', flat=True).distinct()
 
             try:
-                buses = set(from_buses) & set(to_buses)
+                routes = set(loc_from_routes) & set(loc_to_routes)
             except UnboundLocalError:
-                buses = Bus.objects.none()
+                routes = Route.objects.none()
             else:
-                buses = Bus.objects.filter(id__in=buses)
+                routes = Route.objects.filter(id__in=routes)
             finally:
-                context['buses'] = buses
+                context['routes'] = routes
         context['form'] = DirectionForm()
         return context
 
