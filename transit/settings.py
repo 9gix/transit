@@ -176,7 +176,7 @@ GOOGLE_API_KEY = "AIzaSyAWT-4e0uWKB4LFa-wWXJCWKNQ2lPk_aEs"
 import djcelery
 djcelery.setup_loader()
 
-BROKER_URL = 'ampq://guest:guest@localhost:5672/'
+BROKER_URL = 'amqp://guest:guest@localhost:5672/'
 
 try:
     LOCAL_SETTINGS
