@@ -43,7 +43,7 @@ class BusStop(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return 'Bus %s:%s' % (route.bus.no, stop.code)
+        return 'Bus %s:%s' % (self.route.bus.no, self.stop.code)
 
 
 class Stop(models.Model):
