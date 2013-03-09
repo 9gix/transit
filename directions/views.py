@@ -55,10 +55,11 @@ class DirectionView(TemplateView):
             else:
                 context['from'] = geo_from[0]
                 loc_from = Point(geo_from[1][1], geo_from[1][0])
-                loc_from_routes = Stop.objects.filter(
+                loc_from_stops = Stop.objects.filter(
                         location__distance_lte=(loc_from, distance),
                         route__isnull=False
-                    ).values_list('route', flat=True).distinct()
+                    )
+                loc_from_routes = loc_from_stops.values_list('route', flat=True).distinct()
 
             try:
                 geo_to = geocoder.geocode(d_to, bounds=bound)
@@ -67,10 +68,11 @@ class DirectionView(TemplateView):
             else:
                 context['to'] = geo_to[0]
                 loc_to = Point(geo_to[1][1], geo_to[1][0])
-                loc_to_routes = Stop.objects.filter(
+                loc_to_stops = Stop.objects.filter(
                         location__distance_lte=(loc_to, distance),
                         route__isnull=False
-                    ).values_list('route', flat=True).distinct()
+                    )
+                loc_to_routes = loc_to_stops.values_list('route', flat=True).distinct()
 
             try:
                 routes = set(loc_from_routes) & set(loc_to_routes)
@@ -98,7 +100,9 @@ class MytransportDataset(object):
 
 
     def get_query(self):
-        return {}
+        return {
+            '$skip':self.skip,
+        }
 
     def get_url(self, dataset):
         url_parts = list(self.base_url)
@@ -113,17 +117,17 @@ class MytransportDataset(object):
             ('AccountKey', self.key),
             ('UniqueUserID', self.guid)]
         while (1):
-            print 'Fetching %s: %s - %s' % (self.dataset, self.skip,  self.skip + self.skip_interval)
-            data_list = self.process(self.dataset, opener)
+            url = self.get_url(self.dataset)
+            print 'Fetching %s: %s - %s at %s' % (self.dataset, self.skip,  self.skip + self.skip_interval, url)
+            result = opener.open(url)
+            data_list = self.process(result)
             if data_list:
                 self.save(data_list)
                 self.skip += self.skip_interval
             else:
                 break
 
-    def process(self, dataset, opener):
-        url = self.get_url(dataset)
-        result = opener.open(url)
+    def process(self, result):
         content = result.read()
 
         data_list = []
@@ -147,11 +151,6 @@ class MytransportDataset(object):
 class MytransportBusStopDataset(MytransportDataset):
     def __init__(self):
         self.dataset = 'BusStopCodeSet'
-
-    def get_query(self):
-        return {
-            '$skip':self.skip,
-        }
 
     def process_properties(self, properties):
         nsmap = self.nsmap
