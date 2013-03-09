@@ -6,3 +6,4 @@ django-crispy-forms>=1.2.3
 -e git://github.com/geopy/geopy.git@master#egg=geopy
 pytz>=2012j
 lxml>=3.1.0
+django-celery>=3.0.11
