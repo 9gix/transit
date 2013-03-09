@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.conf import settings
 from geopy import geocoders
 from directions.forms import DirectionForm
-from directions.models import Bus, Stop
+from directions.models import Bus, Stop, Route, BusStop
 from django.contrib.gis.geos import Point
 from django.contrib.gis.measure import D
 from django.db.models import Q
@@ -83,7 +83,7 @@ class MytransportDataset(object):
     base_url = urlparse("http://datamall.mytransport.sg/ltaodataservice.svc/")
 
     def __init__(self):
-        pass
+        self.dataset = None
 
     def get_dataset_url(self, dataset):
         return urljoin(self.base_url.geturl(), dataset)
@@ -104,21 +104,29 @@ class MytransportDataset(object):
         opener.addheaders = [
             ('AccountKey', self.key),
             ('UniqueUserID', self.guid)]
-        for dataset in self.get_dataset_list():
-            while (True):
-                data_list = self.process(dataset, opener)
-                if data_list:
-                    self.save(data_list)
-                    self.skip += self.skip_interval
-                else:
-                    break
-                print self.skip
+        while (1):
+            print 'Fetching %s: %s - %s' % (self.dataset, self.skip,  self.skip + self.skip_interval)
+            data_list = self.process(self.dataset, opener)
+            if data_list:
+                self.save(data_list)
+                self.skip += self.skip_interval
+            else:
+                break
 
     def process(self, dataset, opener):
         url = self.get_url(dataset)
         result = opener.open(url)
         content = result.read()
-        data_list = self.process_data(content)
+
+        data_list = []
+        feed = etree.fromstring(content)
+        self.nsmap = feed.nsmap
+        self.nsmap['atom'] = self.nsmap[None]
+        entries = feed.findall('atom:entry', self.nsmap)
+        for entry in entries:
+            content = entry.find('atom:content', self.nsmap)
+            properties = content.find('m:properties', self.nsmap)
+            data_list.append(self.process_properties(properties))
         return data_list
 
 
@@ -129,72 +137,115 @@ class MytransportDataset(object):
         raise NotImplementedError
 
 class MytransportBusStopDataset(MytransportDataset):
+    def __init__(self):
+        self.dataset = 'BusStopCodeSet'
+
     def get_query(self):
         return {
             '$skip':self.skip,
         }
 
-    def get_dataset_list(self):
-        return ['BusStopCodeSet']
-
-    def process_data(self, data):
-        stop_list = []
-        feed = etree.fromstring(data)
-        nsmap = feed.nsmap
-        nsmap['atom'] = nsmap[None]
-        entries = feed.findall('atom:entry', nsmap)
-        for entry in entries:
-            content = entry.find('atom:content', nsmap)
-            properties = content.find('m:properties', nsmap)
-
-            # Properties
-            bscode_id = properties.find('d:BusStopCodeID', nsmap).text
-            code = properties.find('d:Code', nsmap).text
-            road = properties.find('d:Road', nsmap).text
-            description = properties.find('d:Description', nsmap).text
-            layout_num = properties.find('d:Layout_Num', nsmap).text
-            #max_pages = properties.find('d:MaxPages', nsmap).text
-            created_at = properties.find('d:CreateDate', nsmap).text
-            stop_list.append({
-                'bus_stop_code_id': bscode_id,
-                'code': code,
-                'road': road,
-                'description': description,
-                'layout_num': layout_num,
-            #    'max_pages': max_pages,
-                'created_at': created_at,
-            })
-        return stop_list
+    def process_properties(self, properties):
+        nsmap = self.nsmap
+        # Properties
+        bscode_id = properties.find('d:BusStopCodeID', nsmap).text
+        code = properties.find('d:Code', nsmap).text
+        road = properties.find('d:Road', nsmap).text
+        description = properties.find('d:Description', nsmap).text
+        layout_num = properties.find('d:Layout_Num', nsmap).text
+        #max_pages = properties.find('d:MaxPages', nsmap).text
+        created_at = properties.find('d:CreateDate', nsmap).text
+        created_at = parse_datetime(created_at)
+        created_at = pytz.timezone(settings.TIME_ZONE).localize(created_at)
+        return {
+            'bus_stop_code_id': bscode_id,
+            'code': code,
+            'road': road,
+            'description': description,
+            'layout_num': layout_num,
+        #    'max_pages': max_pages,
+            'created_at': created_at,
+        }
 
     def save(self, data_list):
         for data in data_list:
-            created_at = parse_datetime(data['created_at'])
-            created_at = pytz.timezone(settings.TIME_ZONE).localize(created_at)
-
             print 'Saving %s' %data['code']
             stop, created = Stop.objects.get_or_create(code=data['code'],
                     defaults={
                         'road': data['road'],
                         'description': data['description'],
-                        'created_at': created_at,
+                        'created_at': data['created_at'],
                     })
             if not created:
                 stop.road = data['road']
                 stop.description = data['description']
-                stop.created_at = created_at
+                stop.created_at = data['created_at']
                 stop.save()
 
 
-class MytransportBusServiceDataset(MytransportDataset):
-    def get_dataset_list(self):
-        return ['SMRTInfoSet', 'SBSTInfoSet']
-
-    def process_data(self, data):
-        pass
-
 class MytransportBusRouteDataset(MytransportDataset):
-    def get_dataset_list(self):
-        return ['SMRTRouteSet', 'SBSTRouteSet']
+    def process_properties(self, properties):
+        nsmap = self.nsmap
+        # Properties
+        svc_no = properties.find('d:SR_SVC_NUM', nsmap).text
+        svc_dir = properties.find('d:SR_SVC_DIR', nsmap).text
+        route_seq = properties.find('d:SR_ROUT_SEQ', nsmap).text
+        stop_code = properties.find('d:SR_BS_CODE', nsmap).text
+        distance = properties.find('d:SR_DISTANCE', nsmap).text
+        try:
+            distance = float(distance)
+        except ValueError:
+            distance = 0.0
+        created_at = properties.find('d:CreateDate', nsmap).text
+        created_at = parse_datetime(created_at)
+        created_at = pytz.timezone(settings.TIME_ZONE).localize(created_at)
+        return {
+            'svc_no': svc_no,
+            'svc_dir': svc_dir,
+            'route_seq': route_seq,
+            'stop_code': stop_code,
+            'distance': distance,
+            'created_at': created_at,
+        }
 
-    def process_data(self, data):
-        pass
+    def save(self, data_list):
+        for data in data_list:
+            bus, created = Bus.objects.get_or_create(no=data['svc_no'])
+            route, created = Route.objects.get_or_create(bus=bus, direction=data['svc_dir'])
+            stop, created = Stop.objects.get_or_create(code=data['stop_code'])
+
+            bus_stop, created = BusStop.objects.get_or_create(route=route, stop=stop,
+                    defaults={
+                        'sequence': data['route_seq'],
+                        'distance': data['distance'],
+                        'created_at': data['created_at'],
+                    })
+
+            if not created:
+                bus_stop.sequence = data['route_seq']
+                bus_stop.distance = data['distance']
+                bus_stop.created_at = data['created_at']
+                stop.save()
+
+            print "Saved: Bus %s - Stop %s" % (bus.no, stop.code)
+
+class MytransportSMRTBusRouteDataset(MytransportBusRouteDataset):
+    def __init__(self):
+        self.dataset = 'SMRTRouteSet'
+
+class MytransportSBSTBusRouteDataset(MytransportBusRouteDataset):
+    def __init__(self):
+        self.dataset = 'SBSTRouteSet'
+
+"""NOT USED"""
+class MytransportBusServiceDataset(MytransportDataset):
+    pass
+
+class MytransportSMRTBusServiceDataset(MytransportBusServiceDataset):
+    def __init__(self):
+        self.dataset = 'SMRTInfoSet'
+
+class MytransportSBSTBusServiceDataset(MytransportBusServiceDataset):
+    def __init__(self):
+        self.dataset = 'SBSTInfoSet'
+
