@@ -16,6 +16,7 @@ class Bus(models.Model):
 class Route(models.Model):
     bus = models.ForeignKey('Bus')
     stops = models.ManyToManyField('Stop', through="BusStop")
+
     direction = models.IntegerField(null=True)
     multiline = models.MultiLineStringField(null=True)
     line = models.LineStringField(null=True)
@@ -26,7 +27,6 @@ class Route(models.Model):
         return self.bus.no
 
 class BusStop(models.Model):
-    bus = models.ForeignKey('Bus') # Obsolete (Bus will be linked via route)
     route = models.ForeignKey('Route', null=True)
     stop = models.ForeignKey('Stop')
 
@@ -34,12 +34,17 @@ class BusStop(models.Model):
     distance = models.FloatField(null=True)
 
     def __unicode__(self):
-        return 'Bus %s:%s' % (bus.no, stop.code)
+        return 'Bus %s:%s' % (route.bus.no, stop.code)
 
 
 class Stop(models.Model):
     code = models.CharField(max_length=10)
     location = models.PointField(srid=4326, null=True)
+    road = models.CharField(max_length=150, null=True)
+    description = models.TextField(null=True)
+
+    created_at = models.DateTimeField()
+    updated_at = models.DateTimeField(auto_now=True)
 
     objects = models.GeoManager()
 
