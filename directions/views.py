@@ -78,7 +78,7 @@ class DirectionView(TemplateView):
 
                     # lowest Distance at BusStop B
                     busstopB = route.busstop_set.filter(stop__in=stopsB).order_by('distance')
-                    if busstopB[0].distance >= 0:
+                    if busstopB[0].distance != 0:
                         busstopB = busstopB[0]
                     else:
                         # But if the distance is 0 it means loop to its own station, so the distance was the highest
