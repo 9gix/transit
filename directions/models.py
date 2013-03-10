@@ -18,7 +18,7 @@ class Bus(models.Model):
 
 class Route(models.Model):
     bus = models.ForeignKey('Bus')
-    stops = models.ManyToManyField('Stop', through="BusStop")
+    stops = models.ManyToManyField('Stop', through="BusStop", related_name='routes')
 
     direction = models.IntegerField(null=True)
     multiline = models.MultiLineStringField(null=True)
