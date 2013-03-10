@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 bound = "1.170649,103.556442|1.485734,104.094086"
 geocoder = geocoders.GoogleV3()
 
-distance = D(m=500)
+distance = D(km=1)
 
 class FindBusView(View):
     def get(self, request, *args, **kwargs):
@@ -82,13 +82,7 @@ class DirectionView(TemplateView):
                     # highest distance at BusStop A
                     busstopA = route.busstop_set.filter(stop__in=stopsA).order_by('-distance')[0]
 
-                    if busstopB.distance != 0:
-                        route.travel_distance = busstopB.distance - busstopA.distance
-                    else:
-                        # Monkey PATCHing
-                        total_distance = route.busstop_set.order_by('-sequence')[0].distance
-                        route.travel_distance = total_distance - busstopA.distance + \
-                                route.busstop_set.order_by('sequence')[1].distance
+                    route.travel_distance = busstopB.distance - busstopA.distance
 
                     l = busstopA.stop.location.tuple
                     walking_distance_A = haversine(l[0], l[1], a.tuple[0], a.tuple[1])
@@ -244,15 +238,13 @@ class MytransportBusRouteDataset(MytransportDataset):
             route, created = Route.objects.get_or_create(bus=bus, direction=data['svc_dir'])
             stop, created = Stop.objects.get_or_create(code=data['stop_code'])
 
-            bus_stop, created = BusStop.objects.get_or_create(route=route, stop=stop,
+            bus_stop, created = BusStop.objects.get_or_create(route=route, stop=stop, sequence=data['route_seq'],
                     defaults={
-                        'sequence': data['route_seq'],
                         'distance': data['distance'],
                         'created_at': data['created_at'],
                     })
 
             if not created:
-                bus_stop.sequence = data['route_seq']
                 bus_stop.distance = data['distance']
                 bus_stop.created_at = data['created_at']
                 stop.save()
@@ -277,5 +269,4 @@ class MytransportSMRTBusServiceDataset(MytransportBusServiceDataset):
 
 class MytransportSBSTBusServiceDataset(MytransportBusServiceDataset):
     def __init__(self):
-        self.dataset = 'SBSTInfoSet'
-
+        self.dataset = 'SBSTInfoSet' 
