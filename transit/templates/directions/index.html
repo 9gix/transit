@@ -1,0 +1,63 @@
+{% extends 'directions/base.html' %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{% block head %}
+<link href="{% static 'css/directions.css' %}" rel='stylesheet'>
+<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/south-street/jquery-ui.css" rel="stylesheet" />
+<style>
+  html {height: 100%}
+  body {height:100%}
+  #map {height: 400px; width: 100%;}
+</style>
+{% endblock %}
+
+{% block script %}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWT-4e0uWKB4LFa-wWXJCWKNQ2lPk_aEs&sensor=false&libraries=places"></script>
+<script src="{% static 'js/ui.geo_autocomplete.js' %}"></script>
+<script src="{% static 'js/directions.js' %}"></script>
+<script>
+
+</script>
+{% endblock %}
+
+{% block body %}
+<div class='page-header'>
+  <h1>Singapore Bus Visualizer</h1>
+</div>
+
+{% if messages %}
+    <div class="alert">
+      <button type='button' class='close' data-dismiss='alert'>&times;</button>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </div>
+{% endif %}
+
+<div class='row'>
+  <div class='span8'>
+    <form  name="find-bus" class='form-inline' method="get" >
+      <input class="textinput textInput" placeholder='From?' id="id_direction_from" maxlength="100" name="direction_from" required="required" type="text" value="{{ from }}"/>
+      <input id="geo_from" name="geo_from" required="required" type="hidden" value="{{ geo_from }}"/>
+      <input class="textinput textInput" placeholder="Destination?" id="id_direction_to" maxlength="100" name="direction_to" required="required" type="text" value="{{ to }}" />
+      <input id="geo_to" name="geo_to" required="required" type="hidden" value="{{ geo_to }}"/>
+      <input type="submit" value="Find Bus" class="btn btn-primary" id="submit-id-go" />
+    </form>
+    <div id="map"></div> 
+  </div>
+  <div class='span4'>
+    {% if routes %}
+    <div class='lead'><strong>{{ from }}</strong> to <strong>{{ to }}</strong></div>
+      {% for route in routes %}
+      {% with bus=route.bus %}
+        <label for='bus_{{ bus.no }}' class='checkbox' >
+          <input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'>Bus {{ bus.no }} (travel: {{ route.travel_distance }} km, walking: {{ route.walking_distance }} km)
+        </label>
+      {% endwith %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

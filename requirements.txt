@@ -1,0 +1,10 @@
+django>=1.5
+psycopg2>=2.4.6
+south>=0.7.6
+django-debug-toolbar>=0.9.4
+django-extensions>=1.0.3
+django-crispy-forms>=1.2.3
+-e git://github.com/geopy/geopy.git@master#egg=geopy
+pytz>=2012j
+lxml>=3.1.0
+django-celery>=3.0.11
