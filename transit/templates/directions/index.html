@@ -5,6 +5,11 @@
 {% block head %}
 <link href="{% static 'css/directions.css' %}" rel='stylesheet'>
 <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/south-street/jquery-ui.css" rel="stylesheet" />
+<style>
+  html {height: 100%}
+  body {height:100%}
+  #map {height: 100%; width: 100%;}
+</style>
 {% endblock %}
 
 {% block script %}
@@ -17,39 +22,41 @@
 {% endblock %}
 
 {% block body %}
-<h1>Singapore Bus Visualizer</h1>
-<hr />
-{% crispy form %}
+<div class='page-header'>
+  <h1>Singapore Bus Visualizer</h1>
+</div>
 
 {% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
+    <div class="alert">
+      <button type='button' class='close' data-dismiss='alert'>&times;</button>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </div>
 {% endif %}
 
-{% if from and to %}
+<div class='row'>
+  <div class='span7'>
+<form  name="find-bus" class='form-inline' method="get" >
+  <input class="textinput textInput" placeholder='From?' id="id_direction_from" maxlength="100" name="direction_from" required="required" type="text" value="{{ from }}"/>
+  <input class="textinput textInput" placeholder="Destination?" id="id_direction_to" maxlength="100" name="direction_to" required="required" type="text" value="{{ to }}" />
+  <input type="submit" name="go" value="Find Bus" class="btn btn-primary" id="submit-id-go" />
+</form>
+</div>
+<div class='span5'>
   {% if routes %}
-  <h3>Bus Services travelling between:</h3>
-  <ul>
-    <li>{{ from }}</li>
-    <li>{{ to }}</li>
-  </ul>
-  <ol>
+  <div class='lead'>From {{ from }} to {{ to }}:</div>
     {% for route in routes %}
     {% with bus=route.bus %}
-    <li><input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label> (distance: {{ route.travel_distance }})</li>
+      <label for='bus_{{ bus.no }}' class='checkbox' >
+        <input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'>{{ bus.no }} (distance: {{ route.travel_distance }})
+      </label>
     {% endwith %}
     {% endfor %}
-  </ol>
-  <hr />
-  {% else %}
-    <h3>Sorry No bus Found</h3>
   {% endif %}
-{% endif %}
-
-<div id='map'></div>
+  </div>
+  <div id="map" style='width:100%; height:100%'></div> 
+</div>
 
 by Eugene (<a href="mailto:yeo.eugene.oey@gmail.com">yeo.eugene.oey@gmail.com</a>)
 

@@ -24,8 +24,8 @@ class DirectionForm(forms.Form):
     def __init__(self, *args, **kwargs):
         self.helper = FormHelper()
         self.helper.form_method = 'get'
-#        self.helper.form_action = '/find-bus/'
         self.helper.attrs = {'name':'find-bus'}
+        self.helper.form_class = "form-inline"
         self.helper.add_input(Submit('go', 'Find Bus'))
         self.helper.html5_required = True
         super(DirectionForm, self).__init__(*args, **kwargs)
