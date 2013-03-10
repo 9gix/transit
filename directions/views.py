@@ -47,7 +47,6 @@ class DirectionView(TemplateView):
 
             d_from = params.get('direction_from')
             d_to = params.get('direction_to')
-            q = Q()
             try:
                 geo_from = geocoder.geocode(d_from, bounds=bound)
             except ValueError:
@@ -65,6 +64,8 @@ class DirectionView(TemplateView):
                 context['to'] = geo_to[0]
                 b = Point(geo_to[1][1], geo_to[1][0])
 
+            route_list = []
+
             try:
                 # All Stop near A
                 stopsA = Stop.objects.filter(location__distance_lte=(a, distance))
@@ -72,15 +73,12 @@ class DirectionView(TemplateView):
                 # All Stop near B
                 stopsB = Stop.objects.filter(location__distance_lte=(b, distance))
 
+            except ValueError:
+                routes = Route.objects.none()
+            else:
                 # All routes between all stops near A & all stops near B
                 routes = Route.objects.filter(
-                    stops__in=stopsA).filter(stops__in=stopsB).distinct()
-
-
-                #stopsA.filter(routes__in=routes)
-                #stopsB.filter(routes__in=routes)
-
-                route_list = []
+                    stops__in=stopsA).filter(stops__in=stopsB).distinct().select_related('bus')
 
                 # All routes from stops A to B
                 for route in routes:
@@ -95,17 +93,8 @@ class DirectionView(TemplateView):
                     if route.travel_distance > 0:
                         route_list.append(route)
 
-                    # All Bus Stop that have a shorter distance then BusStops B
-                    # stopsAfirst = stopsA.busstop_set.filter(distance__lt=busstop.distance)
-                    # routes.filter
-
-                sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance)
-
-
-
-            except ValueError:
-                routes = Route.objects.none()
             finally:
+                sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance)
                 context['routes'] = sorted_route_list
         context['form'] = DirectionForm()
         return context
