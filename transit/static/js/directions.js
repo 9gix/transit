@@ -65,6 +65,18 @@ function initialize(){
         markerB.setVisible(true);     
         $('#geo_to').val(place.geometry.location);
     });
+    var geo_from = $('#geo_from').val();
+    geo_from = geo_from.replace('(','').replace(')','').split(',');
+    geo_from = new google.maps.LatLng(geo_from[0], geo_from[1]);
+
+    var geo_to = $('#geo_to').val();
+    geo_to = geo_to.replace('(','').replace(')','').split(',');
+    geo_to = new google.maps.LatLng(geo_to[0], geo_to[1]);
+
+    markerA.setPosition(geo_from);
+    markerB.setPosition(geo_to);
+    markerA.setVisible(true);     
+    markerB.setVisible(true);     
 }
 
 google.maps.event.addDomListener(window, 'load', function(){
