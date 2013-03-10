@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 bound = "1.170649,103.556442|1.485734,104.094086"
 geocoder = geocoders.GoogleV3()
 
-distance = D(m=200)
+distance = D(m=500)
 
 class FindBusView(View):
     def get(self, request, *args, **kwargs):
