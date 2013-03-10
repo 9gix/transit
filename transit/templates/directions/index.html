@@ -8,7 +8,7 @@
 <style>
   html {height: 100%}
   body {height:100%}
-  #map {height: 100%; width: 100%;}
+  #map {height: 400px; width: 100%;}
 </style>
 {% endblock %}
 
@@ -36,26 +36,28 @@
 {% endif %}
 
 <div class='row'>
-  <div class='span7'>
-<form  name="find-bus" class='form-inline' method="get" >
-  <input class="textinput textInput" placeholder='From?' id="id_direction_from" maxlength="100" name="direction_from" required="required" type="text" value="{{ from }}"/>
-  <input class="textinput textInput" placeholder="Destination?" id="id_direction_to" maxlength="100" name="direction_to" required="required" type="text" value="{{ to }}" />
-  <input type="submit" name="go" value="Find Bus" class="btn btn-primary" id="submit-id-go" />
-</form>
-</div>
-<div class='span5'>
-  {% if routes %}
-  <div class='lead'>From {{ from }} to {{ to }}:</div>
-    {% for route in routes %}
-    {% with bus=route.bus %}
-      <label for='bus_{{ bus.no }}' class='checkbox' >
-        <input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'>{{ bus.no }} (distance: {{ route.travel_distance }})
-      </label>
-    {% endwith %}
-    {% endfor %}
-  {% endif %}
+  <div class='span8'>
+    <form  name="find-bus" class='form-inline' method="get" >
+      <input class="textinput textInput" placeholder='From?' id="id_direction_from" maxlength="100" name="direction_from" required="required" type="text" value="{{ from }}"/>
+      <input id="geo_from" name="geo_from" required="required" type="hidden" value="{{ geo_from }}"/>
+      <input class="textinput textInput" placeholder="Destination?" id="id_direction_to" maxlength="100" name="direction_to" required="required" type="text" value="{{ to }}" />
+      <input id="geo_to" name="geo_to" required="required" type="hidden" value="{{ geo_to }}"/>
+      <input type="submit" value="Find Bus" class="btn btn-primary" id="submit-id-go" />
+    </form>
+    <div id="map"></div> 
   </div>
-  <div id="map" style='width:100%; height:100%'></div> 
+  <div class='span4'>
+    {% if routes %}
+    <div class='lead'><strong>{{ from }}</strong> to <strong>{{ to }}</strong></div>
+      {% for route in routes %}
+      {% with bus=route.bus %}
+        <label for='bus_{{ bus.no }}' class='checkbox' >
+          <input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'>Bus {{ bus.no }} (distance: {{ route.travel_distance }} km)
+        </label>
+      {% endwith %}
+      {% endfor %}
+    {% endif %}
+  </div>
 </div>
 
 by Eugene (<a href="mailto:yeo.eugene.oey@gmail.com">yeo.eugene.oey@gmail.com</a>)

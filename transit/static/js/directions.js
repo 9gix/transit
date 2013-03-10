@@ -34,22 +34,36 @@ function initialize(){
         });
     });
 
-    var inputs = $('input');
     var options = {
         componentRestrictions: {country: 'sg'}
     };
-    $.each(inputs, function(i, input){
-        var marker = new google.maps.Marker({
-            map: map
-        });
-        var autocomplete = new google.maps.places.Autocomplete(input, options);
-        autocomplete.bindTo('bounds', map);
-        google.maps.event.addListener(autocomplete, 'place_changed', function() {
-            var place = autocomplete.getPlace();
-            marker.setVisible(false);
-            marker.setPosition(place.geometry.location);
-            marker.setVisible(true);     
-        });
+    var markerA = new google.maps.Marker({
+        map: map
+    });
+    var markerB = new google.maps.Marker({
+        map: map
+    });
+
+
+    var input_from = $('#id_direction_from')[0];
+    var input_to = $('#id_direction_to')[0];
+    var autocomplete_from = new google.maps.places.Autocomplete(input_from, options);
+    var autocomplete_to = new google.maps.places.Autocomplete(input_to, options);
+    autocomplete_from.bindTo('bounds', map);
+    autocomplete_to.bindTo('bounds', map);
+    google.maps.event.addListener(autocomplete_from, 'place_changed', function() {
+        var place = autocomplete_from.getPlace();
+        markerA.setVisible(false);
+        markerA.setPosition(place.geometry.location);
+        markerA.setVisible(true);     
+        $('#geo_from').val(place.geometry.location);
+    });
+    google.maps.event.addListener(autocomplete_to, 'place_changed', function() {
+        var place = autocomplete_to.getPlace();
+        markerB.setVisible(false);
+        markerB.setPosition(place.geometry.location);
+        markerB.setVisible(true);     
+        $('#geo_to').val(place.geometry.location);
     });
 }
 

@@ -10,7 +10,7 @@ from django.db.models import Q
 from django.contrib import messages
 from django.conf import settings
 from urlparse import urlparse, urljoin, urlunparse, parse_qs
-
+from ast import literal_eval
 from urllib import unquote, urlencode
 import urllib2
 from lxml import etree
@@ -42,40 +42,32 @@ class DirectionView(TemplateView):
         context = super(DirectionView, self).get_context_data(**kwargs)
         request = self.request
         params = request.GET
-        routes = Bus.objects.none()
-        if params.get('go') == 'Find Bus':
 
-            d_from = params.get('direction_from')
-            d_to = params.get('direction_to')
-            try:
-                geo_from = geocoder.geocode(d_from, bounds=bound)
-            except ValueError:
-                messages.add_message(request, messages.ERROR, "%s not found" %d_from)
-            else:
-                context['from'] = geo_from[0]
-                a = Point(geo_from[1][1], geo_from[1][0])
-
-
-            try:
-                geo_to = geocoder.geocode(d_to, bounds=bound)
-            except ValueError:
-                messages.add_message(request, messages.ERROR, "%s not found" %d_to)
-            else:
-                context['to'] = geo_to[0]
-                b = Point(geo_to[1][1], geo_to[1][0])
+        geo_from = params.get('geo_from')
+        geo_to = params.get('geo_to')
+        if geo_from and geo_to:
+            context['from'] = params.get('direction_from')
+            context['to'] = params.get('direction_to')
+            context['geo_from'] = geo_from
+            context['geo_to'] = geo_to
+            geo_from = literal_eval(geo_from)
+            geo_to = literal_eval(geo_to)
+            a = Point(geo_from[::-1])
+            b = Point(geo_to[::-1])
 
             route_list = []
 
-            try:
+            if a and b:
                 # All Stop near A
                 stopsA = Stop.objects.filter(location__distance_lte=(a, distance))
+                if not stopsA:
+                    messages.add_message(request, messages.INFO, "There's No Bus Stop near %s"% context['from'])
 
                 # All Stop near B
                 stopsB = Stop.objects.filter(location__distance_lte=(b, distance))
+                if not stopsB:
+                    messages.add_message(request, messages.INFO, "There's No Bus Stop near %s"% context['to'])
 
-            except ValueError:
-                routes = Route.objects.none()
-            else:
                 # All routes between all stops near A & all stops near B
                 routes = Route.objects.filter(
                     stops__in=stopsA).filter(stops__in=stopsB).distinct().select_related('bus')
@@ -93,10 +85,11 @@ class DirectionView(TemplateView):
                     if route.travel_distance > 0:
                         route_list.append(route)
 
-            finally:
                 sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance)
                 context['routes'] = sorted_route_list
-        context['form'] = DirectionForm()
+
+                if not sorted_route_list:
+                    messages.add_message(request, messages.INFO, "Couldn't find any Direct Bus from %s to %s"% (context['from'], context['to']))
         return context
 
 class MytransportDataset(object):
