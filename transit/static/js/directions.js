@@ -77,6 +77,10 @@ function initialize(){
     markerB.setPosition(geo_to);
     markerA.setVisible(true);     
     markerB.setVisible(true);     
+
+    if ($('input:checkbox').length == '1'){
+        $('input:checkbox').click();
+    }
 }
 
 google.maps.event.addDomListener(window, 'load', function(){
