@@ -66,13 +66,47 @@ class DirectionView(TemplateView):
                 b = Point(geo_to[1][1], geo_to[1][0])
 
             try:
+                # All Stop near A
+                stopsA = Stop.objects.filter(location__distance_lte=(a, distance))
+
+                # All Stop near B
+                stopsB = Stop.objects.filter(location__distance_lte=(b, distance))
+
+                # All routes between all stops near A & all stops near B
                 routes = Route.objects.filter(
-                    stops__location__distance_lte=(b, distance)).filter(
-                    stops__location__distance_lte=(a,distance)).distinct()
+                    stops__in=stopsA).filter(stops__in=stopsB).distinct()
+
+
+                #stopsA.filter(routes__in=routes)
+                #stopsB.filter(routes__in=routes)
+
+                route_list = []
+
+                # All routes from stops A to B
+                for route in routes:
+
+                    # lowest Distance at BusStop B
+                    busstopB = route.busstop_set.filter(stop__in=stopsB).order_by('distance')[0]
+
+                    # highest distance at BusStop A
+                    busstopA = route.busstop_set.filter(stop__in=stopsA).order_by('-distance')[0]
+
+                    route.travel_distance = busstopB.distance - busstopA.distance
+                    if route.travel_distance > 0:
+                        route_list.append(route)
+
+                    # All Bus Stop that have a shorter distance then BusStops B
+                    # stopsAfirst = stopsA.busstop_set.filter(distance__lt=busstop.distance)
+                    # routes.filter
+
+                sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance)
+
+
+
             except ValueError:
                 routes = Route.objects.none()
             finally:
-                context['routes'] = routes
+                context['routes'] = sorted_route_list
         context['form'] = DirectionForm()
         return context
 

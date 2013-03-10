@@ -39,7 +39,7 @@
   <ol>
     {% for route in routes %}
     {% with bus=route.bus %}
-      <li><input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label></li>
+    <li><input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'><label for='bus_{{ bus.no }}'>{{ bus.no }}</label> (distance: {{ route.travel_distance }})</li>
     {% endwith %}
     {% endfor %}
   </ol>
