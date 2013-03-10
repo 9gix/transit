@@ -15,7 +15,7 @@ function initialize(){
     }
 
     function deleteKmlLayer(serv_no_serv_dir){
-        url = 'http://publictransport.sg/kml/busroutes/'+serv_no_serv_dir+'.kml';
+        url = 'http://dqbug.com/static/kml/'+serv_no_serv_dir+'.kml';
         kmlLayers = $.grep(kmlLayersArray, function(kmlLayer){
             return kmlLayer.url === url;
         });
