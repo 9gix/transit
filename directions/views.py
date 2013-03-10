@@ -82,7 +82,13 @@ class DirectionView(TemplateView):
                     # highest distance at BusStop A
                     busstopA = route.busstop_set.filter(stop__in=stopsA).order_by('-distance')[0]
 
-                    route.travel_distance = busstopB.distance - busstopA.distance
+                    if busstopB.distance != 0:
+                        route.travel_distance = busstopB.distance - busstopA.distance
+                    else:
+                        # Monkey PATCHing
+                        total_distance = route.busstop_set.order_by('-sequence')[0].distance
+                        route.travel_distance = total_distance - busstopA.distance + \
+                                route.busstop_set.order_by('sequence')[1].distance
 
                     l = busstopA.stop.location.tuple
                     walking_distance_A = haversine(l[0], l[1], a.tuple[0], a.tuple[1])
