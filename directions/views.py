@@ -16,6 +16,7 @@ import urllib2
 from lxml import etree
 from datetime import datetime
 from django.utils.dateparse import parse_datetime
+from directions.utils.distance import haversine
 import pytz
 import logging
 
@@ -82,10 +83,19 @@ class DirectionView(TemplateView):
                     busstopA = route.busstop_set.filter(stop__in=stopsA).order_by('-distance')[0]
 
                     route.travel_distance = busstopB.distance - busstopA.distance
+
+                    l = busstopA.stop.location.tuple
+                    walking_distance_A = haversine(l[0], l[1], a.tuple[0], a.tuple[1])
+
+                    l = busstopB.stop.location.tuple
+                    walking_distance_B = haversine(l[0], l[1], b.tuple[0], b.tuple[1])
+
+                    route.walking_distance = round(walking_distance_A + walking_distance_B, 1)
+
                     if route.travel_distance > 0:
                         route_list.append(route)
 
-                sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance)
+                sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance + k.walking_distance)
                 context['routes'] = sorted_route_list
 
                 if not sorted_route_list:

@@ -52,7 +52,7 @@
       {% for route in routes %}
       {% with bus=route.bus %}
         <label for='bus_{{ bus.no }}' class='checkbox' >
-          <input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'>Bus {{ bus.no }} (distance: {{ route.travel_distance }} km)
+          <input type='checkbox' value='{{ bus.no }}-{{ route.direction }}' class='bus_chkbox' id='bus_{{ bus.no }}'>Bus {{ bus.no }} (travel: {{ route.travel_distance }} km, walking: {{ route.walking_distance }} km)
         </label>
       {% endwith %}
       {% endfor %}
