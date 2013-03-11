@@ -35,7 +35,8 @@ function initialize(){
     });
 
     var options = {
-        componentRestrictions: {country: 'sg'}
+        componentRestrictions: {country: 'sg'},
+        types: ['geocode'],
     };
     var markerA = new google.maps.Marker({
         map: map
@@ -65,11 +66,11 @@ function initialize(){
         markerB.setVisible(true);     
         $('#geo_to').val(place.geometry.location);
     });
-    var geo_from = $('#geo_from').val();
+    var geo_from = $('#map').data('from');
     geo_from = geo_from.replace('(','').replace(')','').split(',');
     geo_from = new google.maps.LatLng(geo_from[0], geo_from[1]);
 
-    var geo_to = $('#geo_to').val();
+    var geo_to = $('#map').data('to');
     geo_to = geo_to.replace('(','').replace(')','').split(',');
     geo_to = new google.maps.LatLng(geo_to[0], geo_to[1]);
 

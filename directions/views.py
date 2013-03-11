@@ -2,6 +2,7 @@ from django.views.generic import TemplateView, View
 from django.shortcuts import render
 from django.conf import settings
 from geopy import geocoders
+from geopy.geocoders.googlev3 import GQueryError
 from directions.forms import DirectionForm
 from directions.models import Bus, Stop, Route, BusStop
 from django.contrib.gis.geos import Point
@@ -44,67 +45,86 @@ class DirectionView(TemplateView):
         request = self.request
         params = request.GET
 
-        geo_from = params.get('geo_from')
-        geo_to = params.get('geo_to')
-        if geo_from and geo_to:
-            context['from'] = params.get('direction_from')
-            context['to'] = params.get('direction_to')
-            context['geo_from'] = geo_from
-            context['geo_to'] = geo_to
-            geo_from = literal_eval(geo_from)
-            geo_to = literal_eval(geo_to)
-            a = Point(geo_from[::-1])
-            b = Point(geo_to[::-1])
+        direction_from = params.get('from','')
+        direction_to = params.get('to','')
+        geo_from, geo_to = '',''
+        a, b = '', ''
 
-            route_list = []
+        if direction_from:
+            try:
+                geocode_from = geocoder.geocode(direction_from, bounds=bound, region='sg')
+            except GQueryError:
+                messages.add_message(request, messages.INFO,
+                    "Couldn't locate %s coordinate, please try with full address" %direction_from)
+            else:
+                direction_from = geocode_from[0]
+                geo_from = geocode_from[1]
+                a = Point(geo_from[::-1])
 
-            if a and b:
-                # All Stop near A
-                stopsA = Stop.objects.filter(location__distance_lte=(a, distance))
-                if not stopsA:
-                    messages.add_message(request, messages.INFO, "There's No Bus Stop near %s"% context['from'])
+        if direction_to:
+            try:
+                geocode_to = geocoder.geocode(direction_to, bounds=bound, region='sg')
+            except GQueryError:
+                messages.add_message(request, messages.INFO,
+                    "Couldn't locate %s coordinate, please try with full address" %direction_from)
+            else:
+                direction_to = geocode_to[0]
+                geo_to = geocode_to[1]
+                b = Point(geo_to[::-1])
 
-                # All Stop near B
-                stopsB = Stop.objects.filter(location__distance_lte=(b, distance))
-                if not stopsB:
-                    messages.add_message(request, messages.INFO, "There's No Bus Stop near %s"% context['to'])
+        route_list = []
 
-                # All routes between all stops near A & all stops near B
-                routes = Route.objects.filter(
-                    stops__in=stopsA).filter(stops__in=stopsB).distinct().select_related('bus')
+        if a and b:
+            # All Stop near A
+            stopsA = Stop.objects.filter(location__distance_lte=(a, distance))
+            if not stopsA:
+                messages.add_message(request, messages.INFO, "There's No Bus Stop near %s"% direction_from)
 
-                # All routes from stops A to B
-                for route in routes:
+            # All Stop near B
+            stopsB = Stop.objects.filter(location__distance_lte=(b, distance))
+            if not stopsB:
+                messages.add_message(request, messages.INFO, "There's No Bus Stop near %s"% direction_to)
 
-                    # lowest Distance at BusStop B
-                    busstopB = route.busstop_set.filter(stop__in=stopsB).order_by('distance')
-                    if busstopB[0].distance != 0:
-                        busstopB = busstopB[0]
-                    else:
-                        # But if the distance is 0 it means loop to its own station, so the distance was the highest
-                        busstopB = busstopB.order_by('-distance')[0]
+            # All routes between all stops near A & all stops near B
+            routes = Route.objects.filter(
+                stops__in=stopsA).filter(stops__in=stopsB).distinct().select_related('bus')
 
-                    # highest distance at BusStop A
-                    busstopA = route.busstop_set.filter(stop__in=stopsA).order_by('-distance')[0]
+            # All routes from stops A to B
+            for route in routes:
 
-                    route.travel_distance = busstopB.distance - busstopA.distance
+                # lowest Distance at BusStop B
+                busstopB = route.busstop_set.filter(stop__in=stopsB).order_by('distance')
+                if busstopB[0].distance != 0:
+                    busstopB = busstopB[0]
+                else:
+                    # But if the distance is 0 it means loop to its own station, so the distance was the highest
+                    busstopB = busstopB.order_by('-distance')[0]
 
-                    l = busstopA.stop.location.tuple
-                    walking_distance_A = haversine(l[0], l[1], a.tuple[0], a.tuple[1])
+                # highest distance at BusStop A
+                busstopA = route.busstop_set.filter(stop__in=stopsA).order_by('-distance')[0]
 
-                    l = busstopB.stop.location.tuple
-                    walking_distance_B = haversine(l[0], l[1], b.tuple[0], b.tuple[1])
+                route.travel_distance = busstopB.distance - busstopA.distance
 
-                    route.walking_distance = round(walking_distance_A + walking_distance_B, 1)
+                l = busstopA.stop.location.tuple
+                walking_distance_A = haversine(l[0], l[1], a.tuple[0], a.tuple[1])
 
-                    if route.travel_distance > 0:
-                        route_list.append(route)
+                l = busstopB.stop.location.tuple
+                walking_distance_B = haversine(l[0], l[1], b.tuple[0], b.tuple[1])
 
-                sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance + k.walking_distance)
-                context['routes'] = sorted_route_list
+                route.walking_distance = round(walking_distance_A + walking_distance_B, 1)
 
-                if not sorted_route_list:
-                    messages.add_message(request, messages.INFO, "Couldn't find any Direct Bus from %s to %s"% (context['from'], context['to']))
+                if route.travel_distance > 0:
+                    route_list.append(route)
+
+            sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance + k.walking_distance)
+            context['routes'] = sorted_route_list
+
+            if not sorted_route_list:
+                messages.add_message(request, messages.INFO, "Couldn't find any Direct Bus from %s to %s"% (direction_from, direction_to))
+        context['geo_from'] = geo_from
+        context['geo_to'] = geo_to
+        context['from'] = direction_from
+        context['to'] = direction_to
         return context
 
 class MytransportDataset(object):
