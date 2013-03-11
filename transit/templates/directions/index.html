@@ -38,13 +38,11 @@
 <div class='row'>
   <div class='span8'>
     <form  name="find-bus" class='form-inline' method="get" >
-      <input class="textinput textInput" placeholder='From?' id="id_direction_from" maxlength="100" name="direction_from" required="required" type="text" value="{{ from }}"/>
-      <input id="geo_from" name="geo_from" required="required" type="hidden" value="{{ geo_from }}"/>
-      <input class="textinput textInput" placeholder="Destination?" id="id_direction_to" maxlength="100" name="direction_to" required="required" type="text" value="{{ to }}" />
-      <input id="geo_to" name="geo_to" required="required" type="hidden" value="{{ geo_to }}"/>
+      <input class="textinput textInput" placeholder='From?' id="id_direction_from" maxlength="150" name="from" required="required" type="text" value="{{ from }}"/>
+      <input class="textinput textInput" placeholder="Destination?" id="id_direction_to" maxlength="150" name="to" required="required" type="text" value="{{ to }}" />
       <input type="submit" value="Find Bus" class="btn btn-primary" id="submit-id-go" />
     </form>
-    <div id="map"></div> 
+    <div id="map" data-from='{{ geo_from }}' data-to='{{ geo_to }}'></div> 
   </div>
   <div class='span4'>
     {% if routes %}
