@@ -5,6 +5,11 @@ from django.conf import settings
 PLACE_AUTOCOMPLETE_API_URL = "https://maps.googleapis.com/maps/api/place/autocomplete/json?"
 PLACE_DETAIL_API_URL = "https://maps.googleapis.com/maps/api/place/details/json?"
 
+
+class UnknownPlaceException(Exception):
+    pass
+
+
 def fetch_place_predictions(name):
     params = {
         'input': name,
@@ -38,9 +43,13 @@ def get_place_location(place_detail):
 
 def geocode(place):
     result = fetch_place_predictions(place)
+    if not result['predictions']:
+        raise UnknownPlaceException(place)
     reference, description = get_best_match(result['predictions'])
     place_detail = fetch_place_detail(reference)
     lat, lng = get_place_location(place_detail)
 
     #return place_name, coordinate
     return description, (lat, lng)
+
+
