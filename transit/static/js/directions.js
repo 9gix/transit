@@ -36,7 +36,7 @@ function initialize(){
 
     var options = {
         componentRestrictions: {country: 'sg'},
-        types: ['geocode'],
+        //types: ['geocode'],
     };
     var markerA = new google.maps.Marker({
         map: map
