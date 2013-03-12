@@ -1,10 +1,9 @@
 from django.views.generic import TemplateView, View
 from django.shortcuts import render
 from django.conf import settings
-from geopy import geocoders
-from geopy.geocoders.googlev3 import GQueryError
 from directions.forms import DirectionForm
 from directions.models import Bus, Stop, Route, BusStop
+from directions.utils.placegeocode import geocode, UnknownPlaceException
 from django.contrib.gis.geos import Point
 from django.contrib.gis.measure import D
 from django.db.models import Q
@@ -24,7 +23,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 bound = "1.170649,103.556442|1.485734,104.094086"
-geocoder = geocoders.GoogleV3()
 
 distance = D(km=1)
 
@@ -50,26 +48,15 @@ class DirectionView(TemplateView):
         geo_from, geo_to = '',''
         a, b = '', ''
 
-        if direction_from:
+        if direction_from and direction_to:
             try:
-                geocode_from = geocoder.geocode(direction_from, bounds=bound, region='sg')
-            except GQueryError:
-                messages.add_message(request, messages.INFO,
-                    "Couldn't locate %s coordinate, please try with full address" %direction_from)
+                direction_from, geo_from = geocode(direction_from)
+                direction_to, geo_to = geocode(direction_to)
+            except UnknownPlaceException as e:
+                messages.error(request,
+                    "Couldn't locate %s, please try with another address or place name nearby instead" % e.message)
             else:
-                direction_from = geocode_from[0]
-                geo_from = geocode_from[1]
                 a = Point(geo_from[::-1])
-
-        if direction_to:
-            try:
-                geocode_to = geocoder.geocode(direction_to, bounds=bound, region='sg')
-            except GQueryError:
-                messages.add_message(request, messages.INFO,
-                    "Couldn't locate %s coordinate, please try with full address" %direction_from)
-            else:
-                direction_to = geocode_to[0]
-                geo_to = geocode_to[1]
                 b = Point(geo_to[::-1])
 
         route_list = []
@@ -78,49 +65,54 @@ class DirectionView(TemplateView):
             # All Stop near A
             stopsA = Stop.objects.filter(location__distance_lte=(a, distance))
             if not stopsA:
-                messages.add_message(request, messages.INFO, "There's No Bus Stop near %s"% direction_from)
+                messages.warning(request, "There's No Bus Stop near %s"% direction_from)
 
             # All Stop near B
             stopsB = Stop.objects.filter(location__distance_lte=(b, distance))
             if not stopsB:
-                messages.add_message(request, messages.INFO, "There's No Bus Stop near %s"% direction_to)
+                messages.warning(request, "There's No Bus Stop near %s"% direction_to)
 
-            # All routes between all stops near A & all stops near B
-            routes = Route.objects.filter(
-                stops__in=stopsA).filter(stops__in=stopsB).distinct().select_related('bus')
+            if stopsA and stopsB:
+                # All routes between all stops near A & all stops near B
+                routes = Route.objects.filter(
+                    stops__in=stopsA).filter(stops__in=stopsB).distinct().select_related('bus')
 
-            # All routes from stops A to B
-            for route in routes:
+                # All routes from stops A to B
+                for route in routes:
 
-                # lowest Distance at BusStop B
-                busstopB = route.busstop_set.filter(stop__in=stopsB).order_by('distance')
-                if busstopB[0].distance != 0:
-                    busstopB = busstopB[0]
+                    # lowest Distance at BusStop B
+                    busstopB = route.busstop_set.filter(stop__in=stopsB).order_by('distance')
+                    if busstopB[0].distance != 0:
+                        busstopB = busstopB[0]
+                    else:
+                        # But if the distance is 0 it means loop to its own station, so the distance was the highest
+                        busstopB = busstopB.order_by('-distance')[0]
+
+                    # highest distance at BusStop A
+                    busstopA = route.busstop_set.filter(stop__in=stopsA).order_by('-distance')[0]
+
+                    route.travel_distance = busstopB.distance - busstopA.distance
+
+                    l = busstopA.stop.location.tuple
+                    walking_distance_A = haversine(l[0], l[1], a.tuple[0], a.tuple[1])
+
+                    l = busstopB.stop.location.tuple
+                    walking_distance_B = haversine(l[0], l[1], b.tuple[0], b.tuple[1])
+
+                    route.walking_distance = round(walking_distance_A + walking_distance_B, 1)
+
+                    if route.travel_distance > 0:
+                        route_list.append(route)
+
+                sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance + k.walking_distance)
+                context['routes'] = sorted_route_list
+
+                if sorted_route_list:
+                    route_count = len(sorted_route_list)
+                    messages.success(request, "%s bus Founds from %s to %s" % \
+                            (route_count, direction_from, direction_to))
                 else:
-                    # But if the distance is 0 it means loop to its own station, so the distance was the highest
-                    busstopB = busstopB.order_by('-distance')[0]
-
-                # highest distance at BusStop A
-                busstopA = route.busstop_set.filter(stop__in=stopsA).order_by('-distance')[0]
-
-                route.travel_distance = busstopB.distance - busstopA.distance
-
-                l = busstopA.stop.location.tuple
-                walking_distance_A = haversine(l[0], l[1], a.tuple[0], a.tuple[1])
-
-                l = busstopB.stop.location.tuple
-                walking_distance_B = haversine(l[0], l[1], b.tuple[0], b.tuple[1])
-
-                route.walking_distance = round(walking_distance_A + walking_distance_B, 1)
-
-                if route.travel_distance > 0:
-                    route_list.append(route)
-
-            sorted_route_list = sorted(route_list, key=lambda k: k.travel_distance + k.walking_distance)
-            context['routes'] = sorted_route_list
-
-            if not sorted_route_list:
-                messages.add_message(request, messages.INFO, "Couldn't find any Direct Bus from %s to %s"% (direction_from, direction_to))
+                    messages.info(request, "Sorry, There's no direct Bus from %s to %s"% (direction_from, direction_to))
         context['geo_from'] = geo_from
         context['geo_to'] = geo_to
         context['from'] = direction_from
