@@ -8,3 +8,4 @@ django-crispy-forms>=1.2.3
 pytz>=2012j
 lxml>=3.1.0
 django-celery>=3.0.11
+raven
